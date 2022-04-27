@@ -1,0 +1,443 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import '../node_modules/bootstrap/scss/variables';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+//colors
+$custom-black: #333333;
+$custom-yellow: #FFD00D;
+$custom-blue: #2ADDFD;
+$custom-green: #96DD39;
+$custom-red: #F75555;
+
+
+$font-family-base: 'Inter', sans-serif;
+$font-family-monospace: 'Inter', sans-serif;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 930px,
+  xl: 1140px,
+  xxl: 1326px
+);
+
+body{
+    font-family: 'Inter', sans-serif;
+    color: $custom-black;
+}
+
+._container{
+    max-width: 90%;
+    margin: auto;
+}
+
+.logo__wrapper {
+    padding: 0;
+}
+.logo{
+    width: 225px;
+    height: auto;
+}
+._btn-default{
+    background: rgba(51, 51, 51, 0.82);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+    border: 0px;
+    border-radius: 0;
+}
+
+//HEADER------------------------------------------------------
+
+.header {
+    background: rgb(255, 255, 255);
+    padding: 20px 0 0px 0;
+    &__content{
+        
+    }
+
+    &__navbar {
+        padding: 0;
+
+        a{
+            color: inherit;
+        }
+    }
+    &__logo__btn__wrapper {
+        margin-bottom: 20px;
+    }
+    &__btn {
+    }
+}
+
+.btn__burger {
+    &__burger__label {
+    }
+}
+
+.menu__wrapper {
+}
+.menu__sub {
+    padding: 0;
+    background: #fff;
+    &__item{
+        margin: 0 0 18px 0;
+    }
+}
+.menu__main {
+    background: $custom-yellow;
+    padding: 0px 0 0px 66px;
+
+    &__item{
+        margin: 18px 0;
+    }
+}
+
+.search-form {
+    &__wrapper{
+        
+        width: 100%;
+    }
+    &__btn {
+        width: 100%;
+        height: 100%;
+    }
+    &__input {
+        background: #EFEFEF;
+        border-radius: 0;
+        font-size: 28px;
+
+        &::placeholder{
+            color: #000;
+        }
+        &:focus{
+            background: #EFEFEF;
+            border-color: rgb(51, 51, 51);
+            box-shadow: 0 0 0 0.2rem rgba(51, 51, 51, 0.25)
+        }
+    }
+    
+}
+
+
+//MAIN-SECTION--------------------------------------------------------------
+.main {
+    padding: 75px 0 27px 0;
+    &__content {
+    }
+    &__picture__container {
+    }
+    &__info__container { //main__about__us__wrapper
+    }
+}
+
+
+.accordion-pictures {
+    &__wrapper {  //main__img__wrapper
+        width: 100%;
+        padding-bottom: 324px;
+        position: relative;
+        z-index: 1;
+    }
+    &__img {  //main__img
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.coupleOne {
+}
+.coupleTwo {
+}
+.coupleThree {
+}
+.coupleFour {
+}
+
+
+.accordion-info { //accordion-about-us
+
+    .accordion-item{
+        .accordion-body{
+            padding-bottom: 40px;
+
+            p{
+                margin-bottom: 40px;
+            }
+        }
+        &:nth-child(1){
+            background: $custom-blue;
+        }
+        &:nth-child(2){
+            background: $custom-green;
+        }
+        &:nth-child(3){
+            background: $custom-red;
+        }
+        &:nth-child(4){
+            background: $custom-yellow;
+        }
+    }
+
+
+    &__header {  //accordion-header(bootstraps class)
+        padding: 0rem 1.25rem;
+    }
+    &__open__btn {
+        width: 70px;
+        background: transparent;
+        display: block;
+
+        &::after{
+            display: none;
+        }
+        &:focus{
+            outline: none;
+            box-shadow: none;
+        }
+        &[aria-expanded="true"]{
+            background: transparent;
+            border: 0;
+            box-shadow: none;
+            display: none;
+            
+        }
+    }
+    &__title__btn{
+        width: unset;
+        font-size: 22px;
+        font-weight: bold;
+        color: rgba(51, 51, 51, 0.829);
+        transition: all 0.3s ease;
+        background: transparent;
+        padding: 0;
+
+        &::after{
+            display: none;
+        }
+        &:focus{
+            outline: none;
+            box-shadow: none;
+        }
+        &[aria-expanded="false"]{
+            color: rgba(51, 51, 51, 0.829);
+            background: transparent;
+            box-shadow: none;
+        }
+        &[aria-expanded="true"]{
+            color: rgba(51, 51, 51, 0.829);
+            background: transparent;
+            border: 0;
+            box-shadow: none;
+            font-size: 48px;
+            width: 100%;
+            border-top: 3px solid rgba(51, 51, 51, 0.82);
+            padding-top: 38px;
+            margin-top: 34px;
+            
+            
+        }
+    }
+    &__body__btn {
+        padding: 1rem 1.5rem;
+    }
+}
+
+//WHY-SECTION-------------------------------------------
+.why {
+    padding: 65px 0;
+    position: relative;
+    z-index: 2;
+    background: url('../assets/img/why-bg.png') 0 0/auto 100% no-repeat;
+    .why-content{
+
+    }
+    &__picture__container {
+        position: relative;
+    }
+    &__picture {
+        max-width: 255px;
+        svg{
+            width: 100%;
+            height: auto;
+        }
+    }
+    /* &__bg {
+        
+        img{
+            position: absolute;
+
+            top: 0;
+            left: 0;
+            width: 42.36%;
+            object-fit: cover;
+            //width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    } */
+    &__text__wrapper {
+    }
+    &__main__text {
+        padding-bottom: 7px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        &:after{
+            content: '';
+            display: block;
+            width: 87px;
+            height: 2px;
+            background: #EFEFEF;
+            margin-top: 15px;
+        }
+    }
+    &__subtitle {
+    }
+}
+
+//COLORED-SECTIONS********************************************************
+.designed-for-work{
+    background: $custom-red;
+}
+.colored {
+    
+    &__center__block{
+        z-index: 3;
+        top: 50%;
+        left: 51.5%;
+        width: 255px;
+        height: 255px;
+        background: $custom-blue;
+        transform: translate(-50%, -50%);
+        color: #0F4D58;
+    }
+    &__center__title{
+        font-size: 110px;
+    }
+    &__center__subtitle{
+        font-size: 32px;
+    }
+
+
+    &__wrapper {
+        flex: 0 0 100%;
+    }
+    &__content {
+        width: 50%;
+
+    }
+    &__content__wrapper{
+        width: 69.3%;
+    }
+
+    &__title {
+        font-size: 48px;
+        color: #561E1E;
+
+    }
+    &__text {
+        font-size: 19px;
+    }
+    &__btns__container {
+    }
+    &__btn {
+        padding: 0.75rem 1.25rem;
+    }
+    &__looking__for {
+        background: transparent;
+        border: 0;
+        font-size: 19px;
+        color: #561E1E;
+    }
+    &__img__wrapper {
+        transform: translate(-100%, 0);
+        padding-bottom: 549px;
+        flex: 0 0 calc((100vw *0.5));
+    }
+    &__img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        top: 0%;
+        right: 0%;
+    }
+}
+
+
+//FOOTER-------------------------------------------------------------------------------
+.footer {
+    overflow: hidden;
+    background: #EFEFEF;
+    padding-bottom: 60px;
+    .footer__navbar {
+    }
+    .footer__logo__container {
+    }
+    .footer__logo__wrapper {
+    }
+}
+
+.logo__wrapper {
+}
+.logo {
+}
+
+.footer__content__container{
+    width: 100%;
+}
+
+.footer-content {
+    &__menu__wrapper {
+        background: $custom-yellow;
+        padding-left: 83px;
+        position: relative;
+
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0px;
+            right: -755px;
+            background: $custom-yellow;
+            width: 755px;
+            height: 71px;
+        }
+    }
+    &__menu {
+        justify-content: space-between;
+    }
+    .navbar-nav{
+    }
+    &__menu__list{
+        width: 45%;
+        justify-content: space-between;
+        .nav-item{
+        }
+
+        a{
+            color: inherit;
+            font-size: 15px;
+        }
+    }
+
+    &__social__wrapper{
+
+    }
+    &-social {
+        width: 234px;
+        &__item {
+        }
+    }
+
+    &__copyright__container {
+        padding-left: 95px;
+        margin-top: 30px;
+        font-size: 14px;
+    }
+}
