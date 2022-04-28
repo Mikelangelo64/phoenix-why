@@ -180,10 +180,11 @@ body{
     &__input {
         background: #EFEFEF;
         border-radius: 0;
-        font-size: 28px;
+        font-size: 22px;
+        padding-bottom: 1px;
 
         &::placeholder{
-            color: #000;
+            //color: #000;
         }
         &:focus{
             background: #EFEFEF;
@@ -207,11 +208,7 @@ body{
     }
 }
 
-.workforce{
-    .accordion-info__btn__container{
-        width: 100%;
-    }
-}
+
 .accordion-pictures {
     &__wrapper {  //main__img__wrapper
         width: 100%;
@@ -267,7 +264,7 @@ body{
 
 
     &__header {  //accordion-header(bootstraps class)
-        padding: 0rem 1.25rem;
+        padding: 1rem 1.25rem;
     }
     &__open__btn {
         width: 70px;
@@ -329,6 +326,29 @@ body{
     }
 }
 
+//WORKFORCE
+.workforce{
+    padding: 75px 0 27px 0;
+    .accordion-info__btn__container{
+        width: 100%;
+    }
+    .accordion-pictures {
+        &__wrapper {  //main__img__wrapper
+            width: 100%;
+            padding-bottom: 324px;
+            position: relative;
+            z-index: 1;
+        }
+        &__img {  //main__img
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
 
 //WHY-SECTION-------------------------------------------
 .why {
@@ -576,6 +596,27 @@ body{
     }
 }
 
+.carousel-indicators li{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: 1px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #999999;
+    background-color: #999999;
+    border: 0px solid #fff;
+    border-radius: 10px;
+    margin: 2px;
+    position: relative;
+    top: 45px;
+    
+    &.active{
+    background: #F75555;
+    
+  }
+}
+
 //PHX-------------------------------------------------------------
 .phx {
     margin: 55px 0;
@@ -588,7 +629,7 @@ body{
         
         iframe{
             width: 100%;
-            height: 100%;
+            height: 250px;
         }
     }
     &__media__info {

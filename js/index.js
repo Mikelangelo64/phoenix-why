@@ -1,11 +1,22 @@
 $(document).ready(function(){
     
+    /* $(".carousel").swipe({
 
-    $('.carousel-announcements__indicator ').click(()=>{
-        $(this).addClass('_active-slide')
-        console.log($('.carousel-announcements__indicator, .active'))
+        swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+      
+          if (direction == 'left') $(this).carousel('next');
+          if (direction == 'right') $(this).carousel('prev');
+      
+        },
+        allowPageScroll:"vertical"
+      
+      }); */
+    /* $('.carousel-announcements__indicator ').click(()=>{
+        $('.carousel-announcements__indicator ').addClass('_active-slide')
+        console.log($('.carousel-announcements__indicator'))
+        console.log($(this))
         $('.carousel-announcements__indicator, active').not($(this)).removeClass('_active-slide')
-    })
+    }) */
 
     //lock body
     console.log($('.btn__burger[aria-expanded=false]'));

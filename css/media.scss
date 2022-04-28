@@ -556,6 +556,260 @@ $custom-green: #96DD39;
     
 }
 
+//WORKFORCE--------------------------
+@media (max-width: 1200px) {
+    .workforce {
+        margin: 0px 0 0 0;
+    }
+}
+
+
+
+@media (max-width: 587px) {
+    .workforce{
+        .accordion-info__btn__container{
+            width: 49%;
+        }
+
+        .main {
+            padding: 0px 0 0 0;
+            margin: 28px 0 0 0;
+            &__container{
+                margin: 0;
+                padding: 0;
+            }
+            &__content {
+                width: 100%;
+            }
+            &__picture__container {
+                display: none;
+            }
+            &__info__container { //main__about__us__wrapper
+            }
+        }
+        .accordion-pictures {
+            &__wrapper {  //main__img__wrapper
+            }
+            &__img {  //main__img
+            }
+        }
+        .accordion-info { //accordion-about-us
+            &__header {  //accordion-header(bootstraps class)
+            }
+            &__open__btn {
+            }
+            &__body__btn {
+            }
+            &__extra__picture{
+                width: 100%;
+                padding-bottom: 220px;
+                position: relative;
+                z-index: 1;
+            }
+            &__extra__img{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                -o-object-fit: cover;
+                object-fit: cover;
+            }
+        }
+    }
+    
+    
+    
+    
+    .coupleOne {
+    }
+    .coupleTwo {
+    }
+    .coupleThree {
+    }
+    .coupleFour {
+    }
+    
+    
+    
+}
+@media (min-width: 587px) {
+    .workforce{
+        .main {
+            //margin: 154px 0 0 0;
+            position: relative;
+            &__content {
+            }
+            &__picture__container {
+            }
+            &__info__container { //main__about__us__wrapper
+                z-index: 3;
+                max-width: 78.94%;
+            }
+        }
+        
+        
+        .accordion-pictures {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            &__wrapper {  //main__img__wrapper
+                //padding-bottom: 91vh;
+                padding-bottom: 655px;
+                //min-height: 655px;
+            }
+            &__img {  //main__img
+            }
+        }
+        .coupleOne {
+        }
+        .coupleTwo {
+        }
+        .coupleThree {
+        }
+        .coupleFour {
+        }
+    
+        .accordion-info { //accordion-about-us
+    
+            .accordion-item{
+                .accordion-body{
+                    padding-bottom: 40px;
+                }
+            }
+        
+        
+            &__header {  //accordion-header(bootstraps class)
+                
+            }
+            &__open__btn {
+                &[aria-expanded="true"]{
+                    
+                }
+            }
+            &__title__btn{
+                font-size: 18px;
+        
+                &::after{
+                    display: none;
+                }
+                &:focus{
+                    outline: none;
+                    box-shadow: none;
+                }
+                &[aria-expanded="false"]{
+                }
+                &[aria-expanded="true"]{
+                    font-size: 32px;
+                    padding-top: 38px;
+                    margin-top: 34px;
+                    
+                    
+                }
+            }
+            &__body__btn {
+            }
+        }
+    }
+    
+}
+@media (min-width: 768px) {
+    .workforce{
+        .accordion-pictures__wrapper{
+            padding-bottom: 595px
+        }
+    }
+}
+@media (min-width: 992px) {
+    .workforce{
+        .main {
+            &__content {
+            }
+            &__picture__container {
+            }
+            &__info__container { //main__about__us__wrapper
+                max-width: 45.94%;
+            }
+        }
+        .accordion-pictures__wrapper{
+            padding-bottom: 694px
+        }
+        .accordion-info { //accordion-about-us
+    
+            &__header {  //accordion-header(bootstraps class)
+                padding: 0rem 1.25rem;
+            }
+            &__open__btn {
+                width: 70px;
+                background: transparent;
+                display: block;
+        
+                &::after{
+                    display: none;
+                }
+                &:focus{
+                    outline: none;
+                    box-shadow: none;
+                }
+                &[aria-expanded="true"]{
+                    background: transparent;
+                    border: 0;
+                    box-shadow: none;
+                    display: none;
+                    
+                }
+            }
+            &__title__btn{
+                font-size: 22px;
+                
+                &[aria-expanded="true"]{
+                    color: rgba(51, 51, 51, 0.829);
+                    background: transparent;
+                    border: 0;
+                    box-shadow: none;
+                    font-size: 48px;
+                    width: 100%;
+                    border-top: 3px solid rgba(51, 51, 51, 0.82);
+                    padding-top: 38px;
+                    margin-top: 34px;
+                    
+                    
+                }
+            }
+        }
+    }
+    
+}
+@media (min-width: 1200px) {
+    
+    .workforce {
+        margin: 154px 0 0 0;
+        .accordion-pictures{
+            &__wrapper{
+                min-height: 590px;
+                padding-bottom: 670px
+            }
+        }
+    }
+    
+}
+@media (min-width: 1415px) {
+    .workforce {
+        &__content {
+        }
+        &__picture__container {
+        }
+        &__info__container { //main__about__us__wrapper
+            z-index: 3;
+            max-width: 34.63%;
+        }
+    }
+    
+}
+
 //WHY-SECTIOM-------------------------
 /* 
 .why {
@@ -725,7 +979,7 @@ $custom-green: #96DD39;
         }
     }
 }
-@media (max-width: 767px){
+@media (max-width: 991px){
     .designed-for-work{}
 
     .growing-for-good{
@@ -1017,11 +1271,7 @@ $custom-green: #96DD39;
         }
     }
 }
-@media (min-width: 633px){
-    .announcements {
-        
-    }
-}
+
 
 //PHX-------------------------------------------------------------
 /* .phx {

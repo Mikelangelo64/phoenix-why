@@ -138,22 +138,8 @@ body._lock {
 .search-form__input {
   background: #EFEFEF;
   border-radius: 0;
-  font-size: 28px;
-}
-.search-form__input::-webkit-input-placeholder {
-  color: #000;
-}
-.search-form__input::-moz-placeholder {
-  color: #000;
-}
-.search-form__input:-ms-input-placeholder {
-  color: #000;
-}
-.search-form__input::-ms-input-placeholder {
-  color: #000;
-}
-.search-form__input::placeholder {
-  color: #000;
+  font-size: 22px;
+  padding-bottom: 1px;
 }
 .search-form__input:focus {
   background: #EFEFEF;
@@ -165,10 +151,6 @@ body._lock {
 .main {
   padding: 75px 0 27px 0;
 }
-.workforce .accordion-info__btn__container {
-  width: 100%;
-}
-
 .accordion-pictures__wrapper {
   width: 100%;
   padding-bottom: 324px;
@@ -208,7 +190,7 @@ body._lock {
   background: #FFD00D;
 }
 .accordion-info__header {
-  padding: 0rem 1.25rem;
+  padding: 1rem 1.25rem;
 }
 .accordion-info__open__btn {
   width: 70px;
@@ -268,6 +250,28 @@ body._lock {
 }
 .accordion-info__body__btn {
   padding: 1rem 1.5rem;
+}
+
+.workforce {
+  padding: 75px 0 27px 0;
+}
+.workforce .accordion-info__btn__container {
+  width: 100%;
+}
+.workforce .accordion-pictures__wrapper {
+  width: 100%;
+  padding-bottom: 324px;
+  position: relative;
+  z-index: 1;
+}
+.workforce .accordion-pictures__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .why {
@@ -512,6 +516,25 @@ body._lock {
   background: #F75555 !important;
 }
 
+.carousel-indicators li {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin: 1px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #999999;
+  background-color: #999999;
+  border: 0px solid #fff;
+  border-radius: 10px;
+  margin: 2px;
+  position: relative;
+  top: 45px;
+}
+.carousel-indicators li.active {
+  background: #F75555;
+}
+
 .phx {
   margin: 55px 0;
 }
@@ -521,7 +544,7 @@ body._lock {
 }
 .phx-content__video iframe {
   width: 100%;
-  height: 100%;
+  height: 250px;
 }
 .phx-content__media__info {
   background: #FFD00D;
