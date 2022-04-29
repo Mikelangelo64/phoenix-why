@@ -298,6 +298,9 @@
     padding: 75px 0 0 0;
     margin: 28px 0 0 0;
   }
+  .main.main-section {
+    padding: 93px 0 0 0;
+  }
   .main__container {
     margin: 0;
     padding: 0;
@@ -1028,6 +1031,13 @@
 @media (min-width: 430px) {
   .news {
     margin: 64px 0;
+    padding-top: 20px;
+  }
+}
+@media (min-width: 992px) {
+  .news {
+    margin: 64px 0;
+    padding-top: 68px;
   }
 }
 @media (min-width: 1022px) {

@@ -577,6 +577,7 @@ body._lock {
 
 .news {
   margin: 64px 0 40px 0;
+  padding-top: 20px;
 }
 
 .news-content__header {
