@@ -62,4 +62,40 @@ $(document).ready(function(){
 
         
     })
+
+    //main additional function for accordion
+    $(`.main-section .main__picture__container .accordion-collapse#imgOne`).parent().addClass('show')
+    $('.main-section .accordion-header').click(function (e) { 
+        e.preventDefault();
+
+        const attribute = $(this).attr('dopAttr')
+        console.log('parent:', $(`.main-section .main__picture__container .accordion-collapse#${attribute}`).parent());
+        console.log('current:', $(`.main-section .main__picture__container .accordion-collapse#${attribute}`));
+         
+        const changedPic = $(`.main-section .main__picture__container .accordion-collapse#${attribute}`)
+         
+        console.log('ATTRIBUTE', attribute);
+         $(`.main-section .main__picture__container .accordion-collapse#${attribute}`).parent().toggleClass('show')
+
+         
+         $(`.main-section .main__picture__container .accordion-collapse`).not(changedPic).parent().removeClass('show')
+     });
+
+    //workforce
+    $(`.workforce .main__picture__container .accordion-collapse#workforceImgOne`).parent().addClass('show')
+    $('.workforce .accordion-header').click(function (e) { 
+        e.preventDefault();
+
+        const attribute = $(this).attr('dopAttr')
+        console.log('parent:', $(`.workforce .main__picture__container .accordion-collapse#${attribute}`).parent());
+        console.log('current:', $(`.workforce .main__picture__container .accordion-collapse#${attribute}`));
+         
+        const changedPic = $(`.workforce .main__picture__container .accordion-collapse#${attribute}`)
+         
+        console.log('ATTRIBUTE', attribute);
+         $(`.workforce .main__picture__container .accordion-collapse#${attribute}`).parent().toggleClass('show')
+
+         
+         $(`.workforce .main__picture__container .accordion-collapse`).not(changedPic).parent().removeClass('show')
+     });
 })

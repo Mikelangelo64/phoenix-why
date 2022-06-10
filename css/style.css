@@ -95,7 +95,7 @@ body._lock {
 .header {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  background: white;
+  background: rgb(255, 255, 255);
   padding: 20px 0 0px 0;
 }
 .header._header__scroll {
@@ -143,17 +143,54 @@ body._lock {
 }
 .search-form__input:focus {
   background: #EFEFEF;
-  border-color: #333333;
+  border-color: rgb(51, 51, 51);
   -webkit-box-shadow: 0 0 0 0.2rem rgba(51, 51, 51, 0.25);
           box-shadow: 0 0 0 0.2rem rgba(51, 51, 51, 0.25);
 }
 
 .main {
+  height: 735px;
   padding: 75px 0 27px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-image: url(../assets/labels/logo-phoenix.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+}
+.accordion-pictures .accordion-item.show {
+  height: 100%;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.accordion-pictures .accordion-item.show .accordion-collapse.show {
+  height: 100%;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.accordion-pictures .accordion-item.show .accordion-collapse.show .accordion-body {
+  height: 100%;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.accordion-pictures .accordion-item.show .accordion-collapse.show .accordion-body .accordion-pictures__wrapper {
+  height: 100%;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .accordion-pictures__wrapper {
   width: 100%;
-  padding-bottom: 324px;
   position: relative;
   z-index: 1;
 }
@@ -191,11 +228,17 @@ body._lock {
 }
 .accordion-info__header {
   padding: 1rem 1.25rem;
+  cursor: pointer;
 }
 .accordion-info__open__btn {
   width: 70px;
   background: transparent;
   display: block;
+  border: none;
+  pointer-events: none;
+}
+.accordion-info__open__btn.accordion-button:not(.collapsed) {
+  background-color: transparent;
 }
 .accordion-info__open__btn::after {
   display: none;
@@ -221,6 +264,7 @@ body._lock {
   transition: all 0.3s ease;
   background: transparent;
   padding: 0;
+  pointer-events: none;
 }
 .accordion-info__title__btn::after {
   display: none;
@@ -253,14 +297,15 @@ body._lock {
 }
 
 .workforce {
-  padding: 75px 0 27px 0;
+  padding: 75px 0 75px 0;
+  height: 670px;
 }
 .workforce .accordion-info__btn__container {
   width: 100%;
 }
 .workforce .accordion-pictures__wrapper {
   width: 100%;
-  padding-bottom: 324px;
+  /* padding-bottom: 324px; */
   position: relative;
   z-index: 1;
 }
@@ -419,8 +464,8 @@ body._lock {
           transform: translate(-100%, 0);
   padding-bottom: 549px;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 calc((100vw *0.5));
-          flex: 0 0 calc((100vw *0.5));
+      -ms-flex: 0 0 50vw;
+          flex: 0 0 50vw;
 }
 .colored__img {
   position: absolute;
@@ -576,8 +621,10 @@ body._lock {
 }
 
 .news {
-  margin: 64px 0 40px 0;
-  padding-top: 20px;
+  padding: 80px 0 40px;
+  position: relative;
+  z-index: 2;
+  background-color: #fff;
 }
 
 .news-content__header {

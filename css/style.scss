@@ -199,20 +199,52 @@ body{
 
 //MAIN-SECTION--------------------------------------------------------------
 .main {
+    height: 735px;
     padding: 75px 0 27px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url(../assets/labels/logo-phoenix.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 50%;
+
+
+
     &__content {
     }
     &__picture__container {
     }
     &__info__container { //main__about__us__wrapper
+        //margin: auto;
     }
 }
 
 
 .accordion-pictures {
+    .accordion-item.show{
+        height: 100%;
+        transition: all .3s ease;
+        .accordion-collapse.show{
+            height: 100%;
+            transition: all .3s ease;
+            .accordion-body{
+                height: 100%;
+                transition: all .3s ease;
+                .accordion-pictures__wrapper{
+                    height: 100%;
+                    transition: all .3s ease;
+                }
+            }
+        }
+    }
+
+
     &__wrapper {  //main__img__wrapper
         width: 100%;
-        padding-bottom: 324px;
+        //padding-bottom: 324px;
         position: relative;
         z-index: 1;
     }
@@ -265,11 +297,18 @@ body{
 
     &__header {  //accordion-header(bootstraps class)
         padding: 1rem 1.25rem;
+        cursor: pointer;
     }
     &__open__btn {
         width: 70px;
         background: transparent;
         display: block;
+        border: none;
+        pointer-events: none;
+
+        &.accordion-button:not(.collapsed){
+            background-color: transparent;
+        }
 
         &::after{
             display: none;
@@ -294,6 +333,7 @@ body{
         transition: all 0.3s ease;
         background: transparent;
         padding: 0;
+        pointer-events: none;
 
         &::after{
             display: none;
@@ -328,14 +368,15 @@ body{
 
 //WORKFORCE
 .workforce{
-    padding: 75px 0 27px 0;
+    padding: 75px 0 75px 0;
+    height: 670px;
     .accordion-info__btn__container{
         width: 100%;
     }
     .accordion-pictures {
         &__wrapper {  //main__img__wrapper
             width: 100%;
-            padding-bottom: 324px;
+            /* padding-bottom: 324px; */
             position: relative;
             z-index: 1;
         }
@@ -669,8 +710,11 @@ body{
 
 //NEWS------------------------------------------------------------
 .news {
-    margin: 64px 0 40px 0;
-    padding-top: 20px;
+    //margin: 64px 0 40px 0;
+    padding: 80px 0 40px;
+    position: relative;
+    z-index: 2;
+    background-color: #fff;
 }
 .news-content {
     

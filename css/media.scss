@@ -318,7 +318,7 @@ $custom-green: #96DD39;
 
 
 @media (max-width: 1200px) {
-    .main {
+    .main-section {
         margin: 105px 0 0 0;
     }
 }
@@ -334,6 +334,7 @@ $custom-green: #96DD39;
     .main {
         padding: 75px 0 0 0;
         margin: 28px 0 0 0;
+        height: unset;
         &.main-section{
             padding: 93px 0 0 0;
         }
@@ -395,6 +396,7 @@ $custom-green: #96DD39;
 @media (min-width: 587px) {
     .main {
         //margin: 154px 0 0 0;
+        
         position: relative;
         &__content {
         }
@@ -415,8 +417,8 @@ $custom-green: #96DD39;
         height: 100%;
         z-index: 1;
         &__wrapper {  //main__img__wrapper
-            //padding-bottom: 91vh;
-            padding-bottom: 655px;
+            
+            //padding-bottom: 655px;
             //min-height: 655px;
         }
         &__img {  //main__img
@@ -474,7 +476,7 @@ $custom-green: #96DD39;
 }
 @media (min-width: 768px) {
     .accordion-pictures__wrapper{
-        padding-bottom: 595px
+        //padding-bottom: 595px
     }
 }
 @media (min-width: 992px) {
@@ -488,7 +490,7 @@ $custom-green: #96DD39;
         }
     }
     .accordion-pictures__wrapper{
-        padding-bottom: 694px
+        //padding-bottom: 694px
     }
     .accordion-info { //accordion-about-us
 
@@ -535,13 +537,13 @@ $custom-green: #96DD39;
     }
 }
 @media (min-width: 1200px) {
-    .main {
+    .main-section {
         margin: 154px 0 0 0;
     }
     .accordion-pictures{
         &__wrapper{
-            min-height: 590px;
-            padding-bottom: 670px
+            // min-height: 590px;
+            // padding-bottom: 670px
         }
     }
 }
@@ -562,7 +564,7 @@ $custom-green: #96DD39;
 //WORKFORCE--------------------------
 @media (max-width: 1200px) {
     .workforce {
-        margin: 0px 0 0 0;
+        /* margin: 0px 0 0 0; */
     }
 }
 
@@ -660,8 +662,8 @@ $custom-green: #96DD39;
             height: 100%;
             z-index: 1;
             &__wrapper {  //main__img__wrapper
-                //padding-bottom: 91vh;
-                padding-bottom: 655px;
+                
+               /*  padding-bottom: 655px; */
                 //min-height: 655px;
             }
             &__img {  //main__img
@@ -722,7 +724,7 @@ $custom-green: #96DD39;
 @media (min-width: 769px) {
     .workforce{
         .accordion-pictures__wrapper{
-            padding-bottom: 595px
+           /*  padding-bottom: 595px */
         }
     }
 }
@@ -738,7 +740,7 @@ $custom-green: #96DD39;
             }
         }
         .accordion-pictures__wrapper{
-            padding-bottom: 694px
+           /*  padding-bottom: 694px */
         }
         .accordion-info { //accordion-about-us
     
@@ -789,11 +791,11 @@ $custom-green: #96DD39;
 @media (min-width: 1200px) {
     
     .workforce {
-        margin: 154px 0 0 0;
+        /* margin: 154px 0 0 0; */
         .accordion-pictures{
             &__wrapper{
-                min-height: 590px;
-                padding-bottom: 670px
+                /* min-height: 590px;
+                padding-bottom: 670px */
             }
         }
     }
@@ -1445,8 +1447,9 @@ $custom-green: #96DD39;
 //NEWS------------------------------------------------------------
 @media (min-width: 430px){
     .news {
-        margin: 64px 0;
-        padding-top: 20px;
+        /* margin: 64px 0;
+        padding-top: 20px; */
+        padding: 60px 0 40px;
     }
     .news-content {
         &__header {
@@ -1473,14 +1476,16 @@ $custom-green: #96DD39;
 }
 @media (min-width: 992px){
     .news {
-        margin: 64px 0;
-        padding-top: 68px;
+        /* margin: 64px 0;
+        padding-top: 68px; */
+        padding: 60px 0 40px;
     }
 }
 
 @media (min-width: 1022px){
     .news {
-        margin: 82px 0 75px 0;
+        /* margin: 82px 0 75px 0; */
+        padding: 80px 0 40px;
     }
     .news-content {
         &__header {
