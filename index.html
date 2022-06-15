@@ -5,10 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/media.css">
 
     <title>City of Phoenix</title>
 </head>
@@ -16,7 +19,7 @@
     <header id="header" class="fixed-top header ">
         <div class="container-md header__container">
             <div class="row">
-              <div class="col-3 ">
+              <div class="col-lg-3">
                 <nav class="navbar mt-3 navbar-expand-xl    header__navbar   header__logo__btn__wrapper">
                   <a href="" class="navbar-brand logo__wrapper">
                       <svg class="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="225" height="64.924" viewBox="0 0 225 64.924">
@@ -87,6 +90,7 @@
                 
 
                 <div class="menu__wrapper d-xl-flex flex-column flex-xl-column-reverse align-items-end multi-collapse collapse">
+                  
                   <nav class="navbar navbar-expand-xl float-end     menu__main header__navbar">
                     <div class="navbar-collapse collapse float-end multi-collapse" id="navbarContent2">
                         <ul class="navbar-nav mr-auto  ">
@@ -165,6 +169,7 @@
                                     <path id="Контур_283" data-name="Контур 283" d="M11.742,10.344a6.5,6.5,0,1,0-1.4,1.4h0a1.17,1.17,0,0,0,.1.115l3.85,3.85a1,1,0,0,0,1.415-1.414l-3.85-3.85a1.007,1.007,0,0,0-.115-.1ZM12,6.5A5.5,5.5,0,1,1,6.5,1,5.5,5.5,0,0,1,12,6.5Z" transform="translate(0.001 -0.002)"/>
                                   </svg>
                                   Search
+                                  <span class="search-form__help__close"></span>
                               </button>
 
                               <form class="bg-w collapse search-form ">
@@ -174,7 +179,7 @@
                                   
                                   </div>
                                   <div class="col-3 align-middle search-form__btn__wrapper">
-                                    <button class="btn search-form__btn _btn-default" type="submit">
+                                    <button class="btn search-form__btn _btn" type="submit">
                                       Search
                                     </button> 
                                   </div>
@@ -215,43 +220,21 @@
         <div class="d-flex justify-content-sm-end justify-content-center flex-sm-row flex-column    main__content">
           
           <div class=" main__picture__container">
-            <div class="accordion accordion-flush accordion-pictures" id="accordion-pictures">
-              <div class="accordion-item border-0">
-                <div class="accordion-collapse collapse show coupleOne" id="imgOne" aria-labelledby="HeadingOne" data-bs-parent="#accordion-pictures">
-                  <div class="accordion-body p-0 ">
-                    <div class="accordion-pictures__wrapper">
-                      <img src="./assets/img/main-bg-1.png" alt="main-bg-1" class="accordion-pictures__img">
-                    </div>
-                  </div>
-                </div>
+            <div class="accordion-pictures">
+
+              <div class="accordion-pictures__item">
+                <img src="./assets/img/main-bg-1.png" alt="main-bg-1" class="accordion-pictures__img imgOne">
               </div>
-              <div class="accordion-item border-0">
-                <div class="accordion-collapse collapse coupleTwo" id="imgTwo" aria-labelledby="HeadingTwo" data-bs-parent="#accordion-pictures">
-                  <div class="accordion-body p-0">
-                    <div class="accordion-pictures__wrapper">
-                      <img src="./assets/img/main-bg-2.png" alt="main-bg-2" class="accordion-pictures__img">
-                    </div>
-                  </div>
-                </div>
+              <div class="accordion-pictures__item">
+                <img src="./assets/img/main-bg-2.png" alt="main-bg-2" class="accordion-pictures__img imgTwo">
               </div>
-              <div class="accordion-item border-0">
-                <div class="accordion-collapse collapse coupleThree" id="imgThree" aria-labelledby="HeadingThree" data-bs-parent="#accordion-pictures">
-                  <div class="accordion-body p-0">
-                    <div class="accordion-pictures__wrapper">
-                      <img src="./assets/img/main-bg-1.png" alt="main-bg-3" class="accordion-pictures__img">
-                    </div>
-                  </div>
-                </div>
+              <div class="accordion-pictures__item">
+                <img src="./assets/img/main-bg-1.png" alt="main-bg-3" class="accordion-pictures__img imgThree">
               </div>
-              <div class="accordion-item border-0">
-                <div class="accordion-collapse collapse coupleFour" id="imgFour" aria-labelledby="HeadingFour" data-bs-parent="#accordion-pictures">
-                  <div class="accordion-body p-0">
-                    <div class="accordion-pictures__wrapper">
-                      <img src="./assets/img/main-bg-2.png" alt="main-bg-4" class="accordion-pictures__img">
-                    </div>
-                  </div>
-                </div>
+              <div class="accordion-pictures__item">
+                <img src="./assets/img/main-bg-2.png" alt="main-bg-4" class="accordion-pictures__img imgFour">
               </div>
+
             </div>
           </div>
 
@@ -262,15 +245,15 @@
                 <div class="accordion-info__extra__picture d-sm-none collapse show coupleOne extraOne">
                   <img src="./assets/img/main-bg-1.png" alt="main-bg-1" class="accordion-info__extra__img">
                 </div>
-                <h2 class="accordion-header d-flex align-items-center justify-content-between accordion-info__header  collapsed" id="headingOne"   data-bs-toggle="collapse" data-bs-target=".coupleOne" aria-expanded="false" aria-controls="collapseOne imgOne extraOne" dopAttr="imgOne">
+                <h2 class="accordion-header firstItem d-flex align-items-center justify-content-between accordion-info__header  collapsed" id="headingOne"   data-bs-toggle="collapse" data-bs-target=".coupleOne" aria-expanded="false" aria-controls="collapseOne imgOne extraOne" dopAttr="imgOne">
                   <button class="accordion-button accordion-info__title__btn" type="button" disabled data-bs-toggle="collapse" data-bs-target=".coupleOne" aria-expanded="true" aria-controls="collapseOne imgOne extraOne">
                     Technology Innovation Hub
                   </button>
-                  <button class="accordion-button border-0 accordion-info__open__btn" type="button" data-bs-toggle="collapse" data-bs-target=".coupleOne" aria-expanded="true" aria-controls="collapseOne imgOne">
+                  <span class="border-0 accordion-info__open__btn" >
                     <svg class="" xmlns="http://www.w3.org/2000/svg" width="24" height="12.925" viewBox="0 0 24 12.925">
                       <path id="Контур_337" data-name="Контур 337" d="M1.77,4.77a.923.923,0,0,1,1.307,0L13.5,15.194,23.922,4.77a.924.924,0,0,1,1.307,1.307L14.153,17.153a.923.923,0,0,1-1.307,0L1.77,6.077a.923.923,0,0,1,0-1.307Z" transform="translate(-1.499 -4.499)" fill-rule="evenodd" opacity="0.61"/>
                     </svg>
-                  </button>
+                  </span>
                 </h2>
                 <div class="accordion-collapse collapse show coupleOne" id="collapseOne" aria-labelledby="headingOne" data-bs-parent="#accordion-info">
                   <div class="accordion-body">
@@ -279,7 +262,7 @@
                       growing hubs for biomedical, EV, new energy, 
                       AV mobility, advanced manufacturing and sustainable technology.
                     </p>
-                    <button class=" _btn-default accordion-info__body__btn">Start here</button>
+                    <button class=" _btn _btn-blue accordion-info__body__btn">Start here</button>
                   </div>
                 </div>
               </div>
@@ -291,11 +274,11 @@
                   <button class="accordion-button accordion-info__title__btn" type="button" disabled data-bs-toggle="collapse" data-bs-target=".coupleTwo" aria-expanded="false" aria-controls="collapseTwo imgTwo extraTwo">
                     Next-Generation Workforce
                   </button>
-                  <button class="accordion-button  accordion-info__open__btn" type="button" disabled data-bs-toggle="collapse" data-bs-target=".coupleTwo" aria-expanded="false" aria-controls="collapseTwo imgTwo extraTwo">
+                  <span class="border-0 accordion-info__open__btn" >
                     <svg class="" xmlns="http://www.w3.org/2000/svg" width="24" height="12.925" viewBox="0 0 24 12.925">
                       <path id="Контур_337" data-name="Контур 337" d="M1.77,4.77a.923.923,0,0,1,1.307,0L13.5,15.194,23.922,4.77a.924.924,0,0,1,1.307,1.307L14.153,17.153a.923.923,0,0,1-1.307,0L1.77,6.077a.923.923,0,0,1,0-1.307Z" transform="translate(-1.499 -4.499)" fill-rule="evenodd" opacity="0.61"/>
                     </svg>
-                  </button>
+                  </span>
                 </h2>
                 <div class="accordion-collapse collapse coupleTwo" id="collapseTwo" aria-labelledby="headingTwo" data-bs-parent="#accordion-info">
                   <div class="accordion-body">
@@ -304,7 +287,7 @@
                       business environment because of the quality of 
                       life enjoyed by its thriving and highly-skilled workforce.
                     </p>
-                    <button class="_btn-default accordion-info__body__btn">Start here</button>
+                    <button class="_btn _btn-green accordion-info__body__btn">Start here</button>
                   </div>
                 </div>
               </div>
@@ -316,11 +299,11 @@
                   <button class="accordion-button accordion-info__title__btn" type="button" disabled data-bs-toggle="collapse" data-bs-target=".coupleThree" aria-expanded="false" aria-controls="collapseThree imgThree extraThree">
                     Competitive Cost of Living
                   </button>
-                  <button class="accordion-button collapsed  accordion-info__open__btn" type="button" data-bs-toggle="collapse" data-bs-target=".coupleThree" aria-expanded="false" aria-controls="collapseThree imgThree extraThree">
+                  <span class="border-0 accordion-info__open__btn" >
                     <svg class="" xmlns="http://www.w3.org/2000/svg" width="24" height="12.925" viewBox="0 0 24 12.925">
                       <path id="Контур_337" data-name="Контур 337" d="M1.77,4.77a.923.923,0,0,1,1.307,0L13.5,15.194,23.922,4.77a.924.924,0,0,1,1.307,1.307L14.153,17.153a.923.923,0,0,1-1.307,0L1.77,6.077a.923.923,0,0,1,0-1.307Z" transform="translate(-1.499 -4.499)" fill-rule="evenodd" opacity="0.61"/>
                     </svg>
-                  </button>
+                  </span>
                 </h2>
                 <div class="accordion-collapse collapse coupleThree" id="collapseThree" aria-labelledby="headingThree" data-bs-parent="#accordion-info">
                   <div class="accordion-body">
@@ -330,7 +313,7 @@
                       voluptates dolorem! Iure inventore nostrum delectus 
                       molestiae cum id itaque dolorum.
                     </p>
-                    <button class="_btn-default accordion-info__body__btn">Start here</button>
+                    <button class="_btn _btn-red accordion-info__body__btn">Start here</button>
                   </div>
                 </div>
               </div>
@@ -342,11 +325,11 @@
                   <button class="accordion-button accordion-info__title__btn" type="button" disabled data-bs-toggle="collapse" data-bs-target=".coupleFour" aria-expanded="false" aria-controls="collapseFour imgFour extraFour">
                     14 Employment Corridors
                   </button>
-                  <button class="accordion-button collapsed  accordion-info__open__btn" type="button" data-bs-toggle="collapse" data-bs-target=".coupleFour" aria-expanded="false" aria-controls="collapseFour imgFour extraFour">
+                  <span class="border-0 accordion-info__open__btn" >
                     <svg class="" xmlns="http://www.w3.org/2000/svg" width="24" height="12.925" viewBox="0 0 24 12.925">
                       <path id="Контур_337" data-name="Контур 337" d="M1.77,4.77a.923.923,0,0,1,1.307,0L13.5,15.194,23.922,4.77a.924.924,0,0,1,1.307,1.307L14.153,17.153a.923.923,0,0,1-1.307,0L1.77,6.077a.923.923,0,0,1,0-1.307Z" transform="translate(-1.499 -4.499)" fill-rule="evenodd" opacity="0.61"/>
                     </svg>
-                  </button>
+                  </span>
                 </h2>
                 <div class="accordion-collapse collapse coupleFour" id="collapseFour" aria-labelledby="headingFour" data-bs-parent="#accordion-info">
                   <div class="accordion-body">
@@ -356,7 +339,7 @@
                       voluptates dolorem! Iure inventore nostrum delectus 
                       molestiae cum id itaque dolorum.
                     </p>
-                    <button class="_btn-default accordion-info__body__btn">Start here</button>
+                    <button class="_btn _btn-yellow accordion-info__body__btn">Start here</button>
                   </div>
                 </div>
               </div>
@@ -394,14 +377,14 @@
             </div>
             
           </div>
-          <div class="text-center why__text__wrapper">
-            <h4 class="why__main__text">
+          <div class="text-center  why__text__wrapper">
+            <p class="_text-display why__main__text">
               “We’ve really worked diligently to create a 
               place that makes Phoenix a great destination for 
               high-wage, technology-related businesses that will 
               lead the next generation of innovation in the Southwest 
               and beyond.”
-            </h4>
+            </p>
             <p class="why__subtitle">
               Christine Mackay, Community & Economic Director, City of Phoenix
             </p>
@@ -410,19 +393,19 @@
       </div>
     </section>
 
-    <section class="colored designed-for-work d-flex flex-column-reverse flex-lg-row align-items-center position-relative">
-      <div class="p-1 position-absolute text-center d-flex flex-column align-items-center justify-content-center colored__center__block">
-        <h3 class="colored__center__title fw-bold m-0">5th</h3>
-        <p class="colored__center__subtitle fw-bold">Largest City in the USA</p>
+    <section class="colored colored__red d-flex flex-column-reverse flex-lg-row align-items-center position-relative">
+      <div class="position-absolute text-center colored__center__block">
+        <p class="colored__center__title fw-bold m-0">5th</p>
+        <p class="colored__center__subtitle fw-bold m-0">Largest City in the USA</p>
       </div>
 
       <div class="colored__wrapper">
-        <div class="container-md">
+        <div class="_container">
           <div class="colored__content ">
             <div class="colored__content__wrapper">
-              <h2 class="colored__title fw-bold mb-2">Designed to Work</h2>
-              <div class="colored__text mb-4">
-                <p>
+              <h2 class="colored__title fw-bold">Designed to Work</h2>
+              <div class="colored__text">
+                <p class="_text-body">
                   At 517 square miles, the City of Phoenix 
                   is the 13th largest metro area in the U.S. 
                   Businesses of all sizes can choose from 12 
@@ -431,8 +414,8 @@
                 </p>
               </div>
               <div class="colored__btns__container d-flex w-100 align-items-center justify-content-between">
-              <button class="_btn-default colored__btn text-uppercase">View Maps</button>
-              <button class="text-decoration-underline colored__looking__for">Looking for Data?</button>
+              <button class="_btn _btn-red colored__btn text-uppercase">View Maps</button>
+              <a href="#" class="text-decoration-underline colored__looking__for">Looking for Data?</a>
             </div>
             </div>
             
@@ -445,79 +428,81 @@
     </section>
 
     <section class="announcements">
-      <div class="container-md">
+      <div class="_container">
         <div class="announcements-content">
           <div class="announcements-content__title">
-            <h2 class="fw-bold">Announcements</h2>
+            <h3 class="fw-bold">Announcements</h3>
           </div>
 
           <div class="announcements-content__slider__container">
-            <div id="carousel-announcements" class="carousel-announcements carousel slide" data-bs-ride="carousel" data-bs-wrap="false" data-bs-interval="false">
+            <div class="carousel-announcements swiper">
               
-              <div class="carousel-inner">
-                <div class="carousel-item carousel-announcements__item active">
-                  <div class="card">
-                    <div class="card-body">
-                      <h4 class="fw-bold carousel-announcements__title">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide carousel-announcements__item active">
+                  <div class="carousel-announcements__card">
+                    <div class="carousel-announcements__card__body">
+                      <h6 class="fw-bold carousel-announcements__title">
                         PHX Biz Grants
-                      </h4>
-                      <p class="carousel-announcements__text">
+                      </h6>
+                      <p class="carousel-announcements__text _text-small">
                         The City of Phoenix has a new grant 
                         opportunity for eligible Micro and Small Businesses 
                         for up to $15,000.
                       </p>
                       <div class="carousel-announcements__links__container">
-                        <a href="#" class="fw-bold carousel-announcements__link">Application Info</a>
-                        <a href="#" class="fw-bold carousel-announcements__link">Apply Now</a>
+                        <a href="#" class="fw-bold carousel-announcements__link _text-small">Application Info</a>
+                        <a href="#" class="fw-bold carousel-announcements__link _text-small">Apply Now</a>
                       </div>
                     </div>
                   </div>
                   
                 </div>
-                <div class="carousel-item carousel-announcements__item ">
-                  <div class="card">
-                    <div class="card-body">
-                      <h4 class="fw-bold carousel-announcements__title">
+                <div class="swiper-slide carousel-announcements__item ">
+                  <div class="carousel-announcements__card">
+                    <div class="carousel-announcements__body">
+                      <h6 class="fw-bold carousel-announcements__title">
                         PHX DECC Connects 250K Families
-                      </h4>
-                      <p class="carousel-announcements__text">
+                      </h6>
+                      <p class="carousel-announcements__text _text-small">
                         The new Phoenix Digital Education Connection Canopy 
                         is a replicable network that connects students to 
                         schoolwork and virtual classrooms across Phoenix, Arizona.
                       </p>
                       <div class="carousel-announcements__links__container">
-                        <a href="#" class="fw-bold carousel-announcements__link">How It Works</a>
+                        <a href="#" class="fw-bold carousel-announcements__link _text-small">How It Works</a>
                       </div>
                     </div>
                   </div>
                   
                 </div>
-                <div class="carousel-item carousel-announcements__item ">
-                  <div class="card">
-                    <div class="card-body">
-                      <h4 class="fw-bold carousel-announcements__title">
+                <div class="swiper-slide carousel-announcements__item ">
+                  <div class="carousel-announcements__card">
+                    <div class="carousel-announcements__body">
+                      <h6 class="fw-bold carousel-announcements__title">
                         City Seeks Proposals for Development
-                      </h4>
-                      <p class="carousel-announcements__text">
+                      </h6>
+                      <p class="carousel-announcements__text _text-small">
                         The city of Phoenix is accepting proposals 
                         to lease and develop a 7-parcel site in a vibrant, 
                         fast-growing area of the city.
                       </p>
                       <div class="carousel-announcements__links__container">
-                        <a href="#" class="fw-bold carousel-announcements__link">See RFP</a>
-                        <a href="#" class="fw-bold carousel-announcements__link">Contact Info</a>
+                        <a href="#" class="fw-bold carousel-announcements__link _text-small">See RFP</a>
+                        <a href="#" class="fw-bold carousel-announcements__link _text-small">Contact Info</a>
                       </div>
                     </div>
                   </div>
                   
                 </div>
               </div>
+
+              <div class="swiper-pagination carousel-announcements__indicator__container">
+                <!-- <button class=" active carousel-announcements__indicator"  type="button"></button>
+                <button class=" carousel-announcements__indicator" type="button"></button>
+                <button class=" carousel-announcements__indicator" type="button"></button> -->
+              </div>
             </div>
-            <div class="carousel-indicators d-flex d-md-none position-static carousel-announcements__indicator__container">
-              <button class=" active carousel-announcements__indicator"  type="button" data-bs-target="#carousel-announcements" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1"></button>
-              <button class=" carousel-announcements__indicator" type="button" data-bs-target="#carousel-announcements" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button class=" carousel-announcements__indicator" type="button" data-bs-target="#carousel-announcements" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
+            
           </div>
 
           <div class="d-flex w-100 flex-wrap  align-items-center  announcements-content__label__list">
@@ -541,26 +526,26 @@
       </div>
     </section>
 
-    <section class="colored growing-for-good d-flex flex-column-reverse flex-lg-row-reverse align-items-center position-relative">
+    <section class="colored colored__reverse colored__green growing-for-good d-flex flex-column-reverse flex-lg-row-reverse align-items-center position-relative">
       <div class="p-1 position-absolute text-center d-flex flex-column align-items-center justify-content-center colored__center__block">
-        <h3 class="colored__center__title fw-bold m-0">32.2</h3>
-        <p class="colored__center__subtitle fw-bold">Average Age</p>
+        <p class="colored__center__title fw-bold m-0">32.2</p>
+        <p class="colored__center__subtitle fw-bold m-0">Average Age</p>
       </div>
 
       <div class="colored__wrapper">
-        <div class="container-md">
+        <div class="_container">
           <div class="colored__content ">
             <div class="colored__content__wrapper">
               <h2 class="colored__title fw-bold mb-2">Growing for Good</h2>
               <div class="colored__text mb-4">
-                <p>
+                <p class="_text-body">
                   At an average age of 32.2, Phoenix residents thrive on the City’s 
                   expansive physical infrastructure, allowing burgeoning business 
                   workforces to work nimbly and flexibly.
                 </p>
               </div>
               <div class="colored__btns__container d-flex w-100 justify-content-between">
-              <button class="_btn-default colored__btn text-uppercase">learn how</button>
+              <button class="_btn _btn-green colored__btn text-uppercase">learn how</button>
               <button class="text-decoration-underline colored__looking__for">Looking for Data?</button>
             </div>
             </div>
@@ -574,8 +559,8 @@
     </section>
 
     <section class="phx">
-      <div class="container-md">
-        <div class="phx-content d-md-flex flex-md-row justify-content-between">
+      <div class="_container">
+        <div class="phx-content">
           <div class="phx-content__media__container">
             <div class="phx-content__video">
               <iframe src="https://www.youtube.com/embed/wMA9blusmSs?start=214" title="YouTube video player" 
@@ -586,8 +571,8 @@
 
               </iframe>
             </div>
-            <div class="d-flex flex-column flex-md-row align-items-center justify-content-center   phx-content__media__info">
-              <p class="m-0 phx-content__big__subtitle">
+            <div class="   phx-content__media__info">
+              <p class="phx-content__big__subtitle">
                 8K+
               </p>
               <p class="m-0 phx-content__small__subtitle">
@@ -599,14 +584,14 @@
             <h2 class="fw-bold phx-content__title">
               PHX is Bio
             </h2>
-            <p class="phx-content__text">
+            <p class="_text-body phx-content__text">
               The Phoenix Biomedical Campus hosts the highest 
               concentration of research scientists and research professionals 
               in the region. Discover why leading organizations, nationally 
               recognized biomedical education programs and new bio-industry 
               companies are calling Phoenix home.
             </p>
-            <button class="_btn-default phx-content__btn">Why Phoenix</button>
+            <button class="_btn phx-content__btn">Why Phoenix</button>
           </div>
         </div>
       </div>
@@ -617,37 +602,21 @@
         <div class="d-flex justify-content-sm-end justify-content-center flex-sm-row flex-column    main__content">
           
           <div class=" main__picture__container">
-            <div class="accordion accordion-flush accordion-pictures" id="workforce-accordion-pictures">
+            <div class="accordion-pictures">
               
-              <div class="accordion-item border-0">
-                <div class="accordion-collapse collapse show workforceCoupleOne" id="workforceImgOne" aria-labelledby="workforceHeadingOne" data-bs-parent="#workforce-accordion-pictures">
-                  <div class="accordion-body p-0 ">
-                    <div class="accordion-pictures__wrapper">
-                      <img src="./assets/img/workforce.png" alt="main-bg-1" class="accordion-pictures__img">
-                    </div>
-                  </div>
-                </div>
+              <div class="accordion-pictures__item">
+                <img src="./assets/img/workforce.png" alt="main-bg-1" class="accordion-pictures__img imgOne">
               </div>
-              <div class="accordion-item border-0">
-                <div class="accordion-collapse collapse workforceCoupleTwo" id="workforceImgTwo" aria-labelledby="workforceHeadingTwo" data-bs-parent="#workforce-accordion-pictures">
-                  <div class="accordion-body p-0">
-                    <div class="accordion-pictures__wrapper">
-                      <img src="./assets/img/main-bg-2.png" alt="main-bg-2" class="accordion-pictures__img">
-                    </div>
-                  </div>
-                </div>
+              <div class="accordion-pictures__item">
+                <img src="./assets/img/main-bg-2.png" alt="main-bg-2" class="accordion-pictures__img imgTwo">
               </div>
-              <div class="accordion-item border-0">
-                <div class="accordion-collapse collapse workforceCoupleThree" id="workforceImgThree" aria-labelledby="workforceHeadingThree" data-bs-parent="#workforce-accordion-pictures">
-                  <div class="accordion-body p-0">
-                    <div class="accordion-pictures__wrapper">
-                      <img src="./assets/img/main-bg-1.png" alt="main-bg-3" class="accordion-pictures__img">
-                    </div>
-                  </div>
-                </div>
+              <div class="accordion-pictures__item">
+                <img src="./assets/img/main-bg-1.png" alt="main-bg-3" class="accordion-pictures__img imgThree">
               </div>
             </div>
           </div>
+
+            
 
           <div class=" main__info__container">
             <div class="accordion  accordion-info" id="workforce-accordion-info">
@@ -656,15 +625,15 @@
                 <div class="accordion-info__extra__picture d-sm-none collapse show workforceCoupleOne extraOne">
                   <img src="./assets/img/workforce.png" alt="main-bg-1" class="accordion-info__extra__img">
                 </div>
-                <h2 class="accordion-header  d-flex align-items-center justify-content-between accordion-info__header collapsed" id="workforceHeadingOne" data-bs-toggle="collapse" data-bs-target=".workforceCoupleOne" aria-expanded="true" aria-controls="workforceCollapseOne workforceImgOne extraOne" dopAttr="workforceImgOne">
+                <h2 class="accordion-header firstItem  d-flex align-items-center justify-content-between accordion-info__header collapsed" id="workforceHeadingOne" data-bs-toggle="collapse" data-bs-target=".workforceCoupleOne" aria-expanded="true" aria-controls="workforceCollapseOne workforceImgOne extraOne" dopAttr="imgOne">
                   <button class="accordion-button accordion-info__title__btn" type="button" disabled data-bs-toggle="collapse" data-bs-target=".workforceCoupleOne" aria-expanded="true" aria-controls="workforceCollapseOne workforceImgOne extraOne">
                     TSMC Invests $12B in Phoenix
                   </button>
-                  <button class="accordion-button border-0 accordion-info__open__btn" type="button" data-bs-toggle="collapse" data-bs-target=".workforceCoupleOne" aria-expanded="true" aria-controls="workforceCollapseOne workforceImgOne">
+                  <span class="border-0 accordion-info__open__btn" >
                     <svg class="" xmlns="http://www.w3.org/2000/svg" width="24" height="12.925" viewBox="0 0 24 12.925">
                       <path id="Контур_337" data-name="Контур 337" d="M1.77,4.77a.923.923,0,0,1,1.307,0L13.5,15.194,23.922,4.77a.924.924,0,0,1,1.307,1.307L14.153,17.153a.923.923,0,0,1-1.307,0L1.77,6.077a.923.923,0,0,1,0-1.307Z" transform="translate(-1.499 -4.499)" fill-rule="evenodd" opacity="0.61"/>
                     </svg>
-                  </button>
+                  </span>
                 </h2>
                 <div class="accordion-collapse collapse show workforceCoupleOne" id="workforceCollapseOne" aria-labelledby="workforceHeadingOne" data-bs-parent="#workforce-accordion-info">
                   <div class="accordion-body">
@@ -674,7 +643,7 @@
                       the largest foreign direct investment in Arizona’s history.
                     </p>
                     <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center accordion-info__btn__container">
-                      <button class="mb-3 mb-md-0 _btn-default accordion-info__body__btn">See phase one</button>
+                      <button class="mb-3 mb-md-0 _btn-blue _btn accordion-info__body__btn">See phase one</button>
                       <a href="#" class="accordion-info__link">See All Succes Stories</a>
                     </div>
                     
@@ -686,15 +655,15 @@
                 <div class="accordion-info__extra__picture d-sm-none collapse workforceCoupleTwo extraTwo">
                   <img src="./assets/img/main-bg-2.png" alt="main-bg-2" class="accordion-info__extra__img">
                 </div>
-                <h2 class="accordion-header  d-flex align-items-center justify-content-between accordion-info__header " id="workforceHeadingTwo" data-bs-toggle="collapse" data-bs-target=".workforceCoupleTwo" aria-expanded="true" aria-controls="workforceCollapseTwo workforceImgOne extraTwo" dopAttr="workforceImgTwo">
+                <h2 class="accordion-header  d-flex align-items-center justify-content-between accordion-info__header " id="workforceHeadingTwo" data-bs-toggle="collapse" data-bs-target=".workforceCoupleTwo" aria-expanded="true" aria-controls="workforceCollapseTwo workforceImgOne extraTwo" dopAttr="imgTwo">
                   <button class="accordion-button accordion-info__title__btn" type="button" disabled data-bs-toggle="collapse" data-bs-target=".workforceCoupleTwo" aria-expanded="false" aria-controls="workforceCollapseTwo workforceImgTwo extraTwo">
                     Tuft & Needle
                   </button>
-                  <button class="accordion-button collapsed accordion-info__open__btn" type="button" data-bs-toggle="collapse" data-bs-target=".workforceCoupleTwo" aria-expanded="false" aria-controls="workforceCollapseTwo workforceImgTwo extraTwo">
+                  <span class="border-0 accordion-info__open__btn" >
                     <svg class="" xmlns="http://www.w3.org/2000/svg" width="24" height="12.925" viewBox="0 0 24 12.925">
                       <path id="Контур_337" data-name="Контур 337" d="M1.77,4.77a.923.923,0,0,1,1.307,0L13.5,15.194,23.922,4.77a.924.924,0,0,1,1.307,1.307L14.153,17.153a.923.923,0,0,1-1.307,0L1.77,6.077a.923.923,0,0,1,0-1.307Z" transform="translate(-1.499 -4.499)" fill-rule="evenodd" opacity="0.61"/>
                     </svg>
-                  </button>
+                  </span>
                 </h2>
                 <div class="accordion-collapse collapse workforceCoupleTwo" id="workforceCollapseTwo" aria-labelledby="workforceHeadingTwo" data-bs-parent="#workforce-accordion-info">
                   <div class="accordion-body">
@@ -706,7 +675,7 @@
                     </p>
                     
                     <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center accordion-info__btn__container">
-                      <button class="mb-3 mb-md-0  _btn-default accordion-info__body__btn">See phase two</button>
+                      <button class="mb-3 mb-md-0 _btn-green  _btn accordion-info__body__btn">See phase two</button>
                       <a href="#" class="accordion-info__link">See All Succes Stories</a>
                     </div>
                   </div>
@@ -717,16 +686,16 @@
                 <div class="accordion-info__extra__picture d-sm-none collapse workforceCoupleThree extraThree">
                   <img src="./assets/img/main-bg-1.png" alt="main-bg-3" class="accordion-info__extra__img">
                 </div>
-                <h2 class="accordion-header  d-flex align-items-center justify-content-between accordion-info__header " id="workforceHeadingThree" data-bs-toggle="collapse" data-bs-target=".workforceCoupleThree" aria-expanded="true" aria-controls="workforceCollapseThree workforceImgThree extraThree" dopAttr="workforceImgThree">
+                <h2 class="accordion-header  d-flex align-items-center justify-content-between accordion-info__header " id="workforceHeadingThree" data-bs-toggle="collapse" data-bs-target=".workforceCoupleThree" aria-expanded="true" aria-controls="workforceCollapseThree workforceImgThree extraThree" dopAttr="imgThree">
                   <button class="accordion-button accordion-info__title__btn" type="button" disabled data-bs-toggle="collapse" data-bs-target=".workforceCoupleThree" aria-expanded="false" aria-controls="workforceCollapseThree workforceImgThree extraThree">
                     Creighton University
                   </button>
                   </button>
-                  <button class="accordion-button collapsed  accordion-info__open__btn" type="button" data-bs-toggle="collapse" data-bs-target=".workforceCoupleThree" aria-expanded="false" aria-controls="workforceCollapseThree workforceImgThree extraThree">
+                  <span class="border-0 accordion-info__open__btn" >
                     <svg class="" xmlns="http://www.w3.org/2000/svg" width="24" height="12.925" viewBox="0 0 24 12.925">
                       <path id="Контур_337" data-name="Контур 337" d="M1.77,4.77a.923.923,0,0,1,1.307,0L13.5,15.194,23.922,4.77a.924.924,0,0,1,1.307,1.307L14.153,17.153a.923.923,0,0,1-1.307,0L1.77,6.077a.923.923,0,0,1,0-1.307Z" transform="translate(-1.499 -4.499)" fill-rule="evenodd" opacity="0.61"/>
                     </svg>
-                  </button>
+                  </span>
                 </h2>
                 <div class="accordion-collapse collapse workforceCoupleThree" id="workforceCollapseThree" aria-labelledby="workforceHeadingThree" data-bs-parent="#workforce-accordion-info">
                   <div class="accordion-body">
@@ -737,7 +706,7 @@
                       molestiae cum id itaque dolorum.
                     </p>
                     <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center accordion-info__btn__container">
-                      <button class="mb-3 mb-md-0  _btn-default accordion-info__body__btn">See phase one</button>
+                      <button class="mb-3 mb-md-0 _btn _btn-red accordion-info__body__btn">See phase one</button>
                       <a href="#" class="accordion-info__link">See All Succes Stories</a>
                     </div>
                   </div>
@@ -750,22 +719,22 @@
     </section>
 
     <section class="news">
-      <div class="container-md">
+      <div class="_container">
         <div class="d-flex flex-column align-items-md-center  news-content">
           <div class="news-content__header d-md-flex justify-content-between align-items-center w-100">
             <h2 class="fw-bold news-content__title">
               Latest Economic Development News
             </h2>
-            <button class="text-uppercase _btn-default news-content__btn">View all</button>
+            <button class="text-uppercase _btn news-content__btn">View all</button>
           </div>
           <div class="news-content__cards__list">
             <div class="card">
               <img class="card__img" src="./assets/img/card-1.png" alt="card-1">
               <div class="card-body">
-                <h5 class="fw-bold card-title">
+                <p class="fw-bold card-title">
                   Hypercloud Data Center Arrives in Phoenix
-                </h5>
-                <p class="card-text">
+                </p>
+                <p class="_text-small card-text">
                   Premier cloud service provider Expedient will 
                   offer a complete portfolio of multi-cloud security 
                   and management services directly from a data center 
@@ -780,7 +749,7 @@
                 <h5 class="fw-bold card-title">
                   Phoenix Named Top 5 in Bio-Boom
                 </h5>
-                <p class="card-text">
+                <p class="_text-small card-text">
                   Phoenix’s expanding life science research and 
                   business community were named to the U.S. Top 10 
                   Emerging Clusters by CBRE Research.
@@ -794,7 +763,7 @@
                 <h5 class="fw-bold card-title">
                   EV Epicenter
                 </h5>
-                <p class="card-text">
+                <p class="_text-small card-text">
                   EV and chip heavy hitters Intel, TSMC, and 
                   electric vehicle companies Lucid Motors, ElectraMeccanica, 
                   Nikola and Atlis Motor Vehicles have made the Phoenix metro 
@@ -810,9 +779,9 @@
 
     <footer class="footer">
       <div class="container-md footer__container">
-        <div class="footer-content d-flex flex-column flex-md-row">
+        <div class="footer-content ">
           <div class=" footer__logo__container">
-            <nav class="navbar mt-3 mb-3 navbar-expand-md    footer__navbar   footer__logo__wrapper">
+            <nav class="navbar navbar-expand-md    footer__navbar   footer__logo__wrapper">
               <a href="" class="navbar-brand logo__wrapper">
                   <svg class="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="225" height="64.924" viewBox="0 0 225 64.924">
                       <defs>
@@ -872,13 +841,13 @@
             </nav>
           </div>
           <div class=" d-flex flex-column footer__content__container">
-            <nav class="navbar pt-3 pb-3 navbar-expand-md    footer__navbar   footer-content__menu__wrapper">
+            <nav class="navbar    footer__navbar   footer-content__menu__wrapper">
               <div class="navbar-collapse footer-content__menu" id="navbarFooterMenu">
-                <ul class="navbar-nav align-items-mb-center align-items-left footer-content__menu__list">
-                  <li class="nav-item">
+                <ul class="navbar-nav  footer-content__menu__list">
+                  <li class="nav-item footer-content__menu__item">
                     <a class="nav-link" href="#news">News</a>
                   </li>
-                  <li class="nav-item">
+                  <li class="nav-item footer-content__menu__item">
                     <a class="nav-link" href="#city">City of Phoenix Website</a>
                   </li>
                 </ul>
@@ -926,6 +895,7 @@
 
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./js/index.js"></script>
 </body>
 </html>
