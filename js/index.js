@@ -19,7 +19,7 @@ $(document).ready(function(){
     }) */
 
     //lock body
-    console.log($('.btn__burger[aria-expanded=false]'));
+    //console.log($('.btn__burger[aria-expanded=false]'));
     $('.btn__burger').click(()=>{
         $(document.body).toggleClass('_lock')
     })
@@ -98,7 +98,9 @@ $(document).ready(function(){
     $('.workforce .main__picture__container .accordion-pictures__img.imgOne').parent().addClass('show-accordion-picture')
 
     $(`.main-section .accordion-header.firstItem`).css('pointer-events', 'none')
+    $(`.main-section .accordion-header.firstItem`).attr('aria-expanded', 'true')
     $(`.workforce .accordion-header.firstItem`).css('pointer-events', 'none')
+    $(`.workforce .accordion-header.firstItem`).attr('aria-expanded', 'true')
 
     $('.main-section .accordion-header').click( function(e) {
         
@@ -113,44 +115,161 @@ $(document).ready(function(){
     function togglePicAccordion(event, section){
         event.preventDefault();
         const attribute = $(this).attr('dopAttr')
-        console.log('attribute', attribute);
-        console.log('parent:', $(`${section} .main__picture__container .accordion-pictures__img.${attribute}`).parent());
-        console.log('current:', $(`${section} .main__picture__container .accordion-pictures__img.${attribute}`));
+        // console.log('attribute', attribute);
+        // console.log('parent:', $(`${section} .main__picture__container .accordion-pictures__img.${attribute}`).parent());
+        // console.log('current:', $(`${section} .main__picture__container .accordion-pictures__img.${attribute}`));
 
         const firstTextItem = $(`${section} .accordion-header.firstItem`)
         const firstItem = $(`${section} .main__picture__container .accordion-pictures__img.imgOne`).parent()
         const changedItem = $(`${section} .main__picture__container .accordion-pictures__img.${attribute}`).parent()
 
-        $(firstTextItem).css('pointer-events', 'unset')
+        //unclosed sections
+        $(`${section} .accordion-header`).css('pointer-events', 'unset')
+        if($(this).attr('aria-expanded') === 'true'){
 
-        if(attribute === 'imgOne'){
-            $(firstTextItem).css('pointer-events', 'none')
-        }
-
-        if(changedItem.hasClass('show-accordion-picture')){
             //text
-            // $(firstTextItem).trigger('click')
-            $(firstTextItem).css('pointer-events', 'none')
-            $(firstTextItem).attr('aria-expanded', 'true')
-            $(firstTextItem).addClass('collapsed')
+            $(this).css('pointer-events', 'none')
 
-            console.log('hui', $(firstTextItem).children('.accordion-info__title__btn'));
-            $(firstTextItem).children('.accordion-info__title__btn').attr('aria-expanded', "true")
-            $(firstTextItem).children('.accordion-info__title__btn').addClass('collapsed')
-            $(firstTextItem).next().addClass('show')
-            $(firstTextItem).prev().addClass('show')
-
-
-            //picture
-            firstItem.addClass('show-accordion-picture')
-            $(`${section} .main__picture__container .accordion-pictures__img`).parent().not(firstItem).removeClass('show-accordion-picture')
-            return
+            //console.log('unclosed sections', this);
+            // return
         }
+
+        // if(attribute === 'imgOne'){
+        //     $(firstTextItem).css('pointer-events', 'none')
+        // }
+
+
+        //unused logic
+    //     if(changedItem.hasClass('show-accordion-picture')){
+    //         text
+    //         $(firstTextItem).css('pointer-events', 'none')
+    //         $(firstTextItem).attr('aria-expanded', 'true')
+    //         $(firstTextItem).addClass('collapsed')
+
+    //         console.log('hui', $(firstTextItem).children('.accordion-info__title__btn'));
+            
+    //         $(firstTextItem).children('.accordion-info__title__btn').attr('aria-expanded', "true")
+    //         $(firstTextItem).children('.accordion-info__title__btn').addClass('collapsed')
+    //         $(firstTextItem).next().addClass('show')
+    //         $(firstTextItem).prev().addClass('show')
+
+
+    //         picture
+    //         firstItem.addClass('show-accordion-picture')
+    //         $(`${section} .main__picture__container .accordion-pictures__img`).parent().not(firstItem).removeClass('show-accordion-picture')
+    //         return
+    //     }
+
+
         $(changedItem).addClass('show-accordion-picture')
         $(`${section} .main__picture__container .accordion-pictures__img`).parent().not(changedItem).removeClass('show-accordion-picture')
 
        
     }
+
+    //accordion`s timer
+
+    // let progresBarWidth = 100
+    // $('.main-section .accordion-info .firstItem .progressbar').animate({
+        
+    //     width: progresBarWidth + '%'
+    // }, 10000);
+
+    // addEventListener('load', function() {
+    //     let elements = Array.from($(`.main-section .accordion-header`))
+    //     let currentItem //= elements[0]
+    //     let nextItem //= elements[1]
+    //     let indexArr = -1
+
+    //     function autoToggleSlide(){
+    //         indexArr++
+    //         if(indexArr > elements.length - 1){
+    //             indexArr = 0
+    //             //currentItem = elements[indexArr]
+    //         }
+    //         if(indexArr > elements.length - 2){
+    //             nextItem = elements[0]
+    //         }
+    //         else{
+    //             nextItem = elements[indexArr+1]
+    //         }
+    //         currentItem = elements[indexArr]
+            
+            
+    //         changeItemOnTimer(currentItem, nextItem)
+            
+    //     }
+
+    //     let autoTransition = setInterval(autoToggleSlide, 2000);
+
+    //     $(`.main-section .accordion-header`).click(function (e) { 
+    //         //e.preventDefault();
+    //         // elements.forEach((item, index)=>{
+
+    //         // })
+
+    //         clearInterval(autoTransition);
+    //         autoTransition = setInterval(autoToggleSlide, 2000);
+    //     });
+        
+    // })
+
+    
+
+    function changeItemOnTimer(currentItem, nextItem){
+
+        $(currentItem).attr('aria-expanded', "false")
+        $(currentItem).css('pointer-events', 'unset')
+        $(currentItem).removeClass('collapsed')
+        $(currentItem).children('.accordion-info__title__btn').attr('aria-expanded', "false")
+        $(currentItem).children('.accordion-info__title__btn').removeClass('collapsed')
+        $(currentItem).next().removeClass('show')
+        $(currentItem).prev().removeClass('show')
+    
+        $(currentItem).parent().removeClass('current-to-show')
+    
+            $(nextItem).attr('aria-expanded', 'true')
+            $(nextItem).css('pointer-events', 'none')
+                
+            $(nextItem).addClass('collapsed')
+            $(nextItem).children('.accordion-info__title__btn').attr('aria-expanded', "true")
+            $(nextItem).children('.accordion-info__title__btn').addClass('collapsed')
+            $(nextItem).next().addClass('show')
+            $(nextItem).prev().addClass('show')
+    
+            $(nextItem).parent().addClass('current-to-show')
+
+                
+        
+
+       
+
+        console.log('elements', currentItem, nextItem);
+        // return [currentItem, nextItem]
+    }
+
+    // function infinityCollapse(counter){
+    //     if(counter > 20){
+    //         counter = 0
+    //         console.log('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA');
+    //         createProgressbar(`.main-section .accordion-info .accordion-item .accordion-header[aria-expanded="true"] .progressbar`, '1s', function(){
+    //             changeItemOnTimer('.main-section')
+
+    //             //$(`.main-section .accordion-info .accordion-item .accordion-header .progressbar .inner`).remove()
+
+    //             return infinityCollapse(counter)
+    //         })
+    //         return
+    //     }else{
+    //         createProgressbar(`.main-section .accordion-info .accordion-item .accordion-header[aria-expanded="true"] .progressbar`, '1s', function(){
+    //             changeItemOnTimer('.main-section')
+
+    //             //$(`.main-section .accordion-info .accordion-item .accordion-header .progressbar .inner`).remove()
+
+    //             return infinityCollapse(counter++)
+    //         })
+    //     }
+    // }
 
     //main additional function for accordion
     // $(`.main-section .main__picture__container .accordion-collapse#imgOne`).parent().addClass('show')

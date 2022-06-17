@@ -26,6 +26,17 @@ $container-max-widths: (
   xxl: 1326px
 );
 
+@keyframes progressbar-countdown {
+    0% {
+      width: 100%;
+      //background: #0F0;
+    }
+    100% {
+      width: 0%;
+      //background: #F00;
+    }
+  }
+
 body{
     font-family: 'Inter', sans-serif;
     color: $custom-black;
@@ -415,8 +426,8 @@ h6{
         width: 100%;
         height: 100%;
         overflow: auto;
-        padding: 0 0 105px 0;
-        transform: translate(0px, 105px);
+        padding: 0 0 96px 0;
+        transform: translate(0px, 96px);
 
         //opacity: 0;
 
@@ -542,7 +553,7 @@ h6{
         font-size: 16px;
 
         svg{
-            width: 13px;
+            width: 8px;
             height: auto;
             //margin-right: 15px;
         }
@@ -552,6 +563,14 @@ h6{
         }
         &:last-child{
             border-bottom: 0px solid #000;
+            border-bottom: 20px;
+        }
+    }
+}
+.menu__sub__item, .menu__main__item{
+    @media (max-width: 1200px) {
+        &:first-child{
+            padding-top: 20px;
         }
     }
 }
@@ -725,6 +744,20 @@ h6{
     //.main__container
     &__container{
         height: 100%;
+        padding: 0;
+        max-width: 1350px;
+        @media (max-width: 1400px) {
+            max-width: 1140px;
+        }
+        @media (max-width: 1200px) {
+            max-width: 960px;
+        }
+        @media (max-width: 992px) {
+            max-width: 720px;
+        }
+        @media (max-width: 768px) {
+            max-width: 540px;
+        }
         @media (max-width: 576px) {
             margin: 0;
             padding: 0;
@@ -766,6 +799,7 @@ h6{
         }
         @media screen and (max-width: 770px) {
             max-width: unset;
+            height: unset;
         }
     }
 }
@@ -780,6 +814,9 @@ h6{
     &__item {
         &.show-accordion-picture{
             .accordion-pictures__img {
+                opacity: 1;
+            }
+            .workforce__inscription{
                 opacity: 1;
             }
         }
@@ -969,6 +1006,13 @@ h6{
         }
     }
 
+    // .progressbar{
+    //     display: none;
+    //     width: 100%;
+    //     height: 2px;
+    //     background-color:rgba(51, 51, 51, 0.82);
+    // }
+
     //.accordion-info__open__btn
     &__open__btn {
         width: 70px;
@@ -1002,6 +1046,28 @@ h6{
             
         // }
     }
+    
+    .progressbar {
+        // width: 80%;
+        // margin: 25px auto;
+        // border: solid 1px #000;
+      }
+    //   .progressbar .inner {
+    //     height: 15px;
+    //     animation: progressbar-countdown;
+    //     /* Placeholder, this will be updated using javascript */
+    //     animation-duration: 40s;
+    //     /* We stop in the end */
+    //     animation-iteration-count: 1;
+    //     /* Stay on pause when the animation is finished finished */
+    //     animation-fill-mode: forwards;
+    //     /* We start paused, we start the animation using javascript */
+    //     animation-play-state: paused;
+    //     /* We want a linear animation, ease-out is standard */
+    //     animation-timing-function: linear;
+    //   }
+      
+
 
     //.accordion-info__title__btn
     &__title__btn{
@@ -1016,6 +1082,25 @@ h6{
         background: transparent;
         padding: 0;
         pointer-events: none;
+
+        .progressbar{
+            display: none;
+            width: 100%;
+            height: 2px;
+            background-color:rgba(51, 51, 51, 0.82);
+
+            animation: progressbar-countdown;
+                /* Placeholder, this will be updated using javascript */
+                animation-duration: 2s;
+                /* We stop in the end */
+                animation-iteration-count: 1;
+                /* Stay on pause when the animation is finished finished */
+                animation-fill-mode: forwards;
+                /* We start paused, we start the animation using javascript */
+                animation-play-state: paused;
+                /* We want a linear animation, ease-out is standard */
+                animation-timing-function: linear;
+        }
 
         &::after{
             display: none;
@@ -1038,12 +1123,27 @@ h6{
             line-height: inherit;
             letter-spacing: inherit;
             width: 100%;
-            border-top: 3px solid rgba(51, 51, 51, 0.82);
-            padding-top: 38px;
-            margin-top: 34px;
+            // border-top: 3px solid rgba(51, 51, 51, 0.82);
+            // padding-top: 38px;
+            // margin-top: 34px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+
+            .progressbar{
+                display: block;
+                margin: 38px 0 34px;
+
+                
+            }
             
             
         }
+        
+        
+        
         &[aria-expanded="true"] ~ .accordion-info__open__btn{
             background: transparent;
             border: 0;
@@ -1072,6 +1172,47 @@ h6{
         height: unset;
         margin: 0;
         padding: 0;
+    }
+
+    //.workforce__inscription 
+    &__inscription {
+        opacity: 0;
+        font-size: 100px;
+        letter-spacing: -0.75px;
+        line-height: 27px;
+        font-weight: 700;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        z-index: 4;
+        top: 51.5%;
+        left: 33.9%;
+        @media screen and (max-width: 1030px) {
+            top: 51.5%;
+            left: 26.9%;
+        }
+        @media screen and (max-width: 920px) {
+            display: none;
+        }
+
+    }
+    //.workforce__inscription__mob
+    &__inscription__mob{
+        font-size: 50px;
+        letter-spacing: -0.75px;
+        line-height: 27px;
+        font-weight: 700;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        z-index: 4;
+        top: 50%;
+        left: 50%;
+        // display: none;
+        // @media screen and (max-width: 920px) {
+        //     display: block;
+        // }
+
     }
 
     .accordion-info__btn__container{
@@ -1113,6 +1254,10 @@ h6{
     z-index: 2;
     background: url('../assets/img/why-bg.png') 0 0/auto 100% no-repeat;
 
+    // @media (max-width: 1030px){
+    //     background: url('../assets/img/why-bg-mob.png') 50% 0%/100% auto no-repeat;
+    //     padding: 70px 0 55px 0;
+    // }
     @media (max-width: 768px){
         background: url('../assets/img/why-bg-mob.png') 50% 0%/100% auto no-repeat;
         padding: 70px 0 55px 0;
@@ -1120,9 +1265,18 @@ h6{
     .why-content{
 
     }
+
+    //.why__picture__container
     &__picture__container {
         position: relative;
+        margin-left: 68px;
 
+        @media (max-width: 1030px){
+            margin-left: 88px;
+        }
+        @media (max-width: 991px){
+            margin-left: 0px;
+        }
         @media (max-width: 768px){
             margin-bottom: 60px;
         }
@@ -1148,8 +1302,10 @@ h6{
             z-index: -1;
         }
     } */
+
+    //.why__text__wrapper
     &__text__wrapper {
-        width: 51.36%;
+        width: 50.36%;
         @media (max-width: 1024px){
             width: 56.36%;
         }
@@ -1174,11 +1330,16 @@ h6{
             margin-top: 21px;
         }
     }
+
+    //.why__subtitle
     &__subtitle {
         font-size: 16px;
         font-weight: 600;
         line-height: 36px;
         letter-spacing: -0.7px;
+        @media screen and (max-width: 1030px) {
+            line-height: 27px;
+        }
     }
 }
 
@@ -1290,6 +1451,7 @@ h6{
     &.colored__reverse{
         
         .colored__center__block{
+            left: 48.5%;
             @media (max-width: 1200px){
                 left: 45%;
             }
@@ -1454,9 +1616,11 @@ h6{
         font-size: 19px;
         line-height: 22px;
         
+        margin-right: 9px;
 
         @media (max-width: 770px){
             font-size: 16px;
+            margin-right: 0;
         }
     }
 
@@ -1534,7 +1698,7 @@ h6{
 
     //.announcements-content__label
     &__label {
-        max-width: 127px;
+        max-width: 187px;
         margin-right: 0;
         margin-bottom: 0;
 
@@ -1883,7 +2047,7 @@ h6{
 
 .card {
     border: none;
-    width: 30.3%;
+    width: 31.5%;
      margin: 0;
     background-color: #EFEFEF;
     // font-size: 16px;

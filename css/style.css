@@ -1,4 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
+@-webkit-keyframes progressbar-countdown {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+@keyframes progressbar-countdown {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
 body {
   font-family: "Inter", sans-serif;
   color: #333333;
@@ -388,9 +404,9 @@ h6 {
     width: 100%;
     height: 100%;
     overflow: auto;
-    padding: 0 0 105px 0;
-    -webkit-transform: translate(0px, 105px);
-            transform: translate(0px, 105px);
+    padding: 0 0 96px 0;
+    -webkit-transform: translate(0px, 96px);
+            transform: translate(0px, 96px);
   }
   .menu__wrapper.collapse:not(.show) {
     opacity: 0;
@@ -513,7 +529,7 @@ h6 {
     font-size: 16px;
   }
   .menu__main__item svg, .menu__sub__item svg {
-    width: 13px;
+    width: 8px;
     height: auto;
   }
   .menu__main__item .nav-link, .menu__sub__item .nav-link {
@@ -521,6 +537,13 @@ h6 {
   }
   .menu__main__item:last-child, .menu__sub__item:last-child {
     border-bottom: 0px solid #000;
+    border-bottom: 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .menu__sub__item:first-child, .menu__main__item:first-child {
+    padding-top: 20px;
   }
 }
 
@@ -687,6 +710,28 @@ h6 {
 }
 .main__container {
   height: 100%;
+  padding: 0;
+  max-width: 1350px;
+}
+@media (max-width: 1400px) {
+  .main__container {
+    max-width: 1140px;
+  }
+}
+@media (max-width: 1200px) {
+  .main__container {
+    max-width: 960px;
+  }
+}
+@media (max-width: 992px) {
+  .main__container {
+    max-width: 720px;
+  }
+}
+@media (max-width: 768px) {
+  .main__container {
+    max-width: 540px;
+  }
 }
 @media (max-width: 576px) {
   .main__container {
@@ -723,6 +768,7 @@ h6 {
 @media screen and (max-width: 770px) {
   .main__info__container {
     max-width: unset;
+    height: unset;
   }
 }
 
@@ -732,6 +778,9 @@ h6 {
   }
 }
 .accordion-pictures__item.show-accordion-picture .accordion-pictures__img {
+  opacity: 1;
+}
+.accordion-pictures__item.show-accordion-picture .workforce__inscription {
   opacity: 1;
 }
 .accordion-pictures__img {
@@ -866,6 +915,29 @@ h6 {
   padding: 0;
   pointer-events: none;
 }
+.accordion-info__title__btn .progressbar {
+  display: none;
+  width: 100%;
+  height: 2px;
+  background-color: rgba(51, 51, 51, 0.82);
+  -webkit-animation: progressbar-countdown;
+          animation: progressbar-countdown;
+  /* Placeholder, this will be updated using javascript */
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  /* We stop in the end */
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  /* Stay on pause when the animation is finished finished */
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  /* We start paused, we start the animation using javascript */
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  /* We want a linear animation, ease-out is standard */
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
 .accordion-info__title__btn::after {
   display: none;
 }
@@ -890,9 +962,20 @@ h6 {
   line-height: inherit;
   letter-spacing: inherit;
   width: 100%;
-  border-top: 3px solid rgba(51, 51, 51, 0.82);
-  padding-top: 38px;
-  margin-top: 34px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.accordion-info__title__btn[aria-expanded=true] .progressbar {
+  display: block;
+  margin: 38px 0 34px;
 }
 .accordion-info__title__btn[aria-expanded=true] ~ .accordion-info__open__btn {
   background: transparent;
@@ -922,6 +1005,44 @@ h6 {
     margin: 0;
     padding: 0;
   }
+}
+.workforce__inscription {
+  opacity: 0;
+  font-size: 100px;
+  letter-spacing: -0.75px;
+  line-height: 27px;
+  font-weight: 700;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #fff;
+  z-index: 4;
+  top: 51.5%;
+  left: 33.9%;
+}
+@media screen and (max-width: 1030px) {
+  .workforce__inscription {
+    top: 51.5%;
+    left: 26.9%;
+  }
+}
+@media screen and (max-width: 920px) {
+  .workforce__inscription {
+    display: none;
+  }
+}
+.workforce__inscription__mob {
+  font-size: 50px;
+  letter-spacing: -0.75px;
+  line-height: 27px;
+  font-weight: 700;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #fff;
+  z-index: 4;
+  top: 50%;
+  left: 50%;
 }
 .workforce .accordion-info__btn__container {
   width: 100%;
@@ -969,6 +1090,17 @@ h6 {
 }
 .why__picture__container {
   position: relative;
+  margin-left: 68px;
+}
+@media (max-width: 1030px) {
+  .why__picture__container {
+    margin-left: 88px;
+  }
+}
+@media (max-width: 991px) {
+  .why__picture__container {
+    margin-left: 0px;
+  }
 }
 @media (max-width: 768px) {
   .why__picture__container {
@@ -983,7 +1115,7 @@ h6 {
   height: auto;
 }
 .why__text__wrapper {
-  width: 51.36%;
+  width: 50.36%;
 }
 @media (max-width: 1024px) {
   .why__text__wrapper {
@@ -1022,6 +1154,11 @@ h6 {
   font-weight: 600;
   line-height: 36px;
   letter-spacing: -0.7px;
+}
+@media screen and (max-width: 1030px) {
+  .why__subtitle {
+    line-height: 27px;
+  }
 }
 
 .colored__red {
@@ -1130,6 +1267,9 @@ h6 {
 
 .colored {
   overflow: hidden;
+}
+.colored.colored__reverse .colored__center__block {
+  left: 48.5%;
 }
 @media (max-width: 1200px) {
   .colored.colored__reverse .colored__center__block {
@@ -1303,10 +1443,12 @@ h6 {
   border: 0;
   font-size: 19px;
   line-height: 22px;
+  margin-right: 9px;
 }
 @media (max-width: 770px) {
   .colored__looking__for {
     font-size: 16px;
+    margin-right: 0;
   }
 }
 .colored__img__wrapper {
@@ -1393,7 +1535,7 @@ h6 {
   }
 }
 .announcements-content__label {
-  max-width: 127px;
+  max-width: 187px;
   margin-right: 0;
   margin-bottom: 0;
 }
@@ -1759,7 +1901,7 @@ h6 {
 
 .card {
   border: none;
-  width: 30.3%;
+  width: 31.5%;
   margin: 0;
   background-color: #EFEFEF;
   border-radius: 0%;
