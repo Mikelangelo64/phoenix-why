@@ -104,16 +104,16 @@ $(document).ready(function(){
 
     $('.main-section .accordion-header').click( function(e) {
         
-        togglePicAccordion.apply(this, [e, '.main-section'])
+        togglePicAccordion.apply(this, ['.main-section'])
     })
 
     $('.workforce .accordion-header').click( function(e) {
         
-        togglePicAccordion.apply(this, [e, '.workforce'])
+        togglePicAccordion.apply(this, ['.workforce'])
     })
 
-    function togglePicAccordion(event, section){
-        event.preventDefault();
+    function togglePicAccordion(section){
+        //event.preventDefault();
         const attribute = $(this).attr('dopAttr')
         // console.log('attribute', attribute);
         // console.log('parent:', $(`${section} .main__picture__container .accordion-pictures__img.${attribute}`).parent());
@@ -169,50 +169,88 @@ $(document).ready(function(){
 
     //accordion`s timer
 
-    // let progresBarWidth = 100
-    // $('.main-section .accordion-info .firstItem .progressbar').animate({
+    addEventListener('load', function() {
+        let elements = Array.from($(`.main-section .accordion-header`))
+        let currentItem //= elements[0]
+        let nextItem //= elements[1]
+        let indexArr = -1
+
+        function autoToggleSlide(){
+            indexArr++
+            if(indexArr > elements.length - 1){
+                indexArr = 0
+                //currentItem = elements[indexArr]
+            }
+            if(indexArr > elements.length - 2){
+                nextItem = elements[0]
+            }
+            else{
+                nextItem = elements[indexArr+1]
+            }
+            currentItem = elements[indexArr]
+            
+            
+            changeItemOnTimer(currentItem, nextItem)
+            togglePicAccordion.apply(nextItem, ['.main-section'])
+            //console.log(elements);
+        }
+
+        let autoTransition = setInterval(autoToggleSlide, 3000);
+
+        $(`.main-section .accordion-header`).click(function (e) { 
+            //e.preventDefault();
+            elements.forEach((item, index)=>{
+                if(item === this){
+                    indexArr = index -1
+                }
+            })
+
+            clearInterval(autoTransition);
+            autoTransition = setInterval(autoToggleSlide, 3000);
+        });
         
-    //     width: progresBarWidth + '%'
-    // }, 10000);
+    })
+    addEventListener('load', function() {
+        let elementsWorkforce = Array.from($(`.workforce .accordion-header`))
+        let currentItemWorkforce //= elements[0]
+        let nextItemWorkforce //= elements[1]
+        let indexArrWorkforce = -1
 
-    // addEventListener('load', function() {
-    //     let elements = Array.from($(`.main-section .accordion-header`))
-    //     let currentItem //= elements[0]
-    //     let nextItem //= elements[1]
-    //     let indexArr = -1
-
-    //     function autoToggleSlide(){
-    //         indexArr++
-    //         if(indexArr > elements.length - 1){
-    //             indexArr = 0
-    //             //currentItem = elements[indexArr]
-    //         }
-    //         if(indexArr > elements.length - 2){
-    //             nextItem = elements[0]
-    //         }
-    //         else{
-    //             nextItem = elements[indexArr+1]
-    //         }
-    //         currentItem = elements[indexArr]
+        function autoToggleSlideWorkforce(){
+            indexArrWorkforce++
+            if(indexArrWorkforce > elementsWorkforce.length - 1){
+                indexArrWorkforce = 0
+                //currentItem = elements[indexArr]
+            }
+            if(indexArrWorkforce > elementsWorkforce.length - 2){
+                nextItemWorkforce = elementsWorkforce[0]
+            }
+            else{
+                nextItemWorkforce = elementsWorkforce[indexArrWorkforce+1]
+            }
+            currentItemWorkforce = elementsWorkforce[indexArrWorkforce]
             
             
-    //         changeItemOnTimer(currentItem, nextItem)
-            
-    //     }
+            changeItemOnTimer(currentItemWorkforce, nextItemWorkforce)
+            togglePicAccordion.apply(nextItemWorkforce, ['.workforce'])
+            //console.log(elementsWorkforce);
+        }
 
-    //     let autoTransition = setInterval(autoToggleSlide, 2000);
+        let autoTransitionWorkforce = setInterval(autoToggleSlideWorkforce, 3000);
 
-    //     $(`.main-section .accordion-header`).click(function (e) { 
-    //         //e.preventDefault();
-    //         // elements.forEach((item, index)=>{
+        $(`.workforce .accordion-header`).click(function (e) { 
+            //e.preventDefault();
+            elementsWorkforce.forEach((item, index)=>{
+                if(item === this){
+                    indexArrWorkforce = index -1
+                }
+            })
 
-    //         // })
-
-    //         clearInterval(autoTransition);
-    //         autoTransition = setInterval(autoToggleSlide, 2000);
-    //     });
+            clearInterval(autoTransitionWorkforce);
+            autoTransitionWorkforce = setInterval(autoToggleSlideWorkforce, 3000);
+        });
         
-    // })
+    })
 
     
 
@@ -239,12 +277,7 @@ $(document).ready(function(){
     
             $(nextItem).parent().addClass('current-to-show')
 
-                
-        
-
-       
-
-        console.log('elements', currentItem, nextItem);
+        //console.log('elements', currentItem, nextItem);
         // return [currentItem, nextItem]
     }
 

@@ -1,18 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
 @-webkit-keyframes progressbar-countdown {
   0% {
-    width: 100%;
+    width: 0%;
   }
   100% {
-    width: 0%;
+    width: 100%;
   }
 }
 @keyframes progressbar-countdown {
   0% {
-    width: 100%;
+    width: 0%;
   }
   100% {
-    width: 0%;
+    width: 100%;
   }
 }
 body {
@@ -923,8 +923,8 @@ h6 {
   -webkit-animation: progressbar-countdown;
           animation: progressbar-countdown;
   /* Placeholder, this will be updated using javascript */
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
   /* We stop in the end */
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
@@ -976,6 +976,8 @@ h6 {
 .accordion-info__title__btn[aria-expanded=true] .progressbar {
   display: block;
   margin: 38px 0 34px;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
 }
 .accordion-info__title__btn[aria-expanded=true] ~ .accordion-info__open__btn {
   background: transparent;

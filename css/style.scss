@@ -28,11 +28,11 @@ $container-max-widths: (
 
 @keyframes progressbar-countdown {
     0% {
-      width: 100%;
+      width: 0%;
       //background: #0F0;
     }
     100% {
-      width: 0%;
+      width: 100%;
       //background: #F00;
     }
   }
@@ -1091,7 +1091,7 @@ h6{
 
             animation: progressbar-countdown;
                 /* Placeholder, this will be updated using javascript */
-                animation-duration: 2s;
+                animation-duration: 3s;
                 /* We stop in the end */
                 animation-iteration-count: 1;
                 /* Stay on pause when the animation is finished finished */
@@ -1135,7 +1135,7 @@ h6{
             .progressbar{
                 display: block;
                 margin: 38px 0 34px;
-
+                animation-play-state: running;
                 
             }
             
