@@ -923,8 +923,8 @@ h6 {
   -webkit-animation: progressbar-countdown;
           animation: progressbar-countdown;
   /* Placeholder, this will be updated using javascript */
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
   /* We stop in the end */
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;

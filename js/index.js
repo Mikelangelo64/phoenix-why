@@ -195,7 +195,7 @@ $(document).ready(function(){
             //console.log(elements);
         }
 
-        let autoTransition = setInterval(autoToggleSlide, 3000);
+        let autoTransition = setInterval(autoToggleSlide, 8000);
 
         $(`.main-section .accordion-header`).click(function (e) { 
             //e.preventDefault();
@@ -206,7 +206,7 @@ $(document).ready(function(){
             })
 
             clearInterval(autoTransition);
-            autoTransition = setInterval(autoToggleSlide, 3000);
+            autoTransition = setInterval(autoToggleSlide, 8000);
         });
         
     })
@@ -236,7 +236,7 @@ $(document).ready(function(){
             //console.log(elementsWorkforce);
         }
 
-        let autoTransitionWorkforce = setInterval(autoToggleSlideWorkforce, 3000);
+        let autoTransitionWorkforce = setInterval(autoToggleSlideWorkforce, 8000);
 
         $(`.workforce .accordion-header`).click(function (e) { 
             //e.preventDefault();
@@ -247,7 +247,7 @@ $(document).ready(function(){
             })
 
             clearInterval(autoTransitionWorkforce);
-            autoTransitionWorkforce = setInterval(autoToggleSlideWorkforce, 3000);
+            autoTransitionWorkforce = setInterval(autoToggleSlideWorkforce, 8000);
         });
         
     })
