@@ -9,6 +9,11 @@ $custom-blue: #2ADDFD;
 $custom-green: #96DD39;
 $custom-red: #F75555;
 
+$custom-dark-yellow: #594d0e;
+$custom-dark-red: #561e1e;
+$custom-dark-green: #344d14;
+$custom-dark-blue: #0f4d58;
+
 
 $font-family-base: 'Inter', sans-serif;
 $font-family-monospace: 'Inter', sans-serif;
@@ -38,27 +43,153 @@ body{
     }
 }
 
-._container{
-    max-width: 90%;
-    margin: auto;
+h2{
+    font-family: 'Inter', sans-serif;
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: -2.5px;
+    font-weight: 700;
+
+    @media screen and (max-width: 770px) {
+        font-size: 32px;
+        line-height: 36px;
+    }
+}
+h3{
+    font-family: 'Inter', sans-serif;
+    font-size: 36px;
+    line-height: 40px;
+    letter-spacing: -2.5px;
+    font-weight: 700;
+    @media screen and (max-width: 770px) {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+}
+h4{
+    font-family: 'Inter', sans-serif;
+    font-size: 28px;
+    line-height: 35px;
+    letter-spacing: -2.5px;
+    font-weight: 700;
+}
+h5{
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: -1px;
+    font-weight: 700;
+}
+h6{
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.75px;
+    font-weight: 700;
 }
 
-.logo__wrapper {
-    padding: 0;
+._container{
+    max-width: 1110px;
+    margin: 0 auto;
+
+    @media screen and (max-width: 1399px) {
+        max-width: 930px;
+    }
+    /* @media screen and (max-width: 991px) {
+        max-width: 720px;
+    } */
+    @media screen and (max-width: 770px) {
+        max-width: 90%;
+    }
 }
-.logo{
-    width: 225px;
-    height: auto;
+
+._text-display{
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: -0.75px;
+
+    @media screen and (max-width: 1030px) {
+        font-size: 19px;
+        font-weight: 400;
+        line-height: 27px;
+        letter-spacing: -0.75px;
+    }
 }
-._btn-default{
-    background: rgba(51, 51, 51, 0.82);
+._text-body{
+    font-family: 'Inter', sans-serif;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: -0.75px;
+
+    @media screen and (max-width: 770px) {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0px;
+    }
+}
+._text-body__compact{
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0px;
+}
+
+._text-small{
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0px;
+}
+
+._btn{
+    background-color: $custom-black;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 16px;
     color: #fff;
     border: 0px;
     border-radius: 0;
+    padding: 17px 40px 17px 30px;
+
+    &._btn-yellow{
+        background-color: $custom-dark-yellow;
+    }
+    &._btn-blue{
+        background-color: $custom-dark-blue;
+    }
+    &._btn-green{
+        background-color: $custom-dark-green;
+    }
+    &._btn-red{
+        background-color: $custom-dark-red;
+    }
 }
+
+//*************************************DEFAULT END
+
+
+
+.logo__wrapper {
+    padding: 0;
+    display: block;
+    max-width: 225px;
+
+    @media screen and (max-width: 1030px) {
+        max-width: 200px;
+    }
+}
+.logo{
+    width: 100%;
+    height: auto;
+}
+
 
 ._scroll-to-top{
     color: #333;
@@ -119,6 +250,7 @@ body{
 
 .header {
     transition: all 0.3s ease;
+
     &._header__scroll{
         transition: all 0.3s ease;
         top: -50%;
@@ -126,10 +258,20 @@ body{
 
     background: rgb(255, 255, 255);
     padding: 20px 0 0px 0;
+
+    //.header__container
+    &__container{}
+
+    //.header__content
     &__content{
-        
+        @media screen and (max-width: 1200px) {
+            &.col{
+                flex: unset;
+            }
+        }
     }
 
+    //.header__navbar
     &__navbar {
         padding: 0;
 
@@ -137,9 +279,22 @@ body{
             color: inherit;
         }
     }
+
+    //.header__logo__btn__wrapper
     &__logo__btn__wrapper {
-        margin-bottom: 20px;
+        margin: auto 0;
+        height: 100%;
+        justify-content: flex-end;
+        @media screen and (max-width: 991px) {
+            justify-content: flex-start;
+        }
+
+        &.mt-3{
+            margin-top: 0 !important;
+        }
     }
+
+
     &__btn {
     }
 }
@@ -152,36 +307,89 @@ body{
 
 .menu__wrapper {
 }
+
+//.menu__sub__item
 .menu__sub {
+    font-size: 15px;
+        line-height: 22px;
     padding: 0;
     background: #fff;
     &__item{
         margin: 0 0 18px 0;
+
+        .nav-link{
+            padding: 0 1rem;
+        }
     }
 }
 .menu__main {
     background: $custom-yellow;
-    padding: 0px 0 0px 66px;
+    padding: 0px 0px 0px 66px;
+    width: 100%;
 
+    #navbarContent2{
+        justify-content: flex-end;
+
+        .navbar-nav{
+            @media screen and (min-width: 1200px) {
+                justify-content: space-between;
+                width: 100%;
+            }
+        }
+    }
+
+    //.menu__main__item
     &__item{
-        margin: 18px 0;
+        font-size: 15px;
+        line-height: 22px;
+        margin: 16px 0;
+        font-weight: 700;
+        color: $custom-dark-yellow;
+
+        .nav-link{
+            padding: 0 1rem;
+        }
     }
 }
 
+
+.btn__search__appear{
+    border-top: 0;
+    border-bottom: 0;
+    font-size: 15px;
+    line-height: 22px;
+
+    &.btn{
+        padding: 0 0.75rem;
+    }
+}
 .search-form {
+
+    //.search-form__wrapper
     &__wrapper{
         
         width: 100%;
     }
+    //.search-form__btn
     &__btn {
         width: 100%;
         height: 100%;
+        padding: unset;
     }
     &__input {
         background: #EFEFEF;
         border-radius: 0;
         font-size: 22px;
+        line-height: 35px;
+        letter-spacing: -1.4px;
         padding-bottom: 1px;
+
+        @media (max-width: 1200px){
+            font-size: 18px;
+            padding: 7px 0 7px 18px;
+        }
+
+
 
         &::placeholder{
             //color: #000;
@@ -274,7 +482,7 @@ body{
     }
     .accordion-item{
         .accordion-body{
-            padding-bottom: 40px;
+            padding: 20px 45px 40px;
 
             p{
                 margin-bottom: 40px;
@@ -296,7 +504,7 @@ body{
 
 
     &__header {  //accordion-header(bootstraps class)
-        padding: 1rem 1.25rem;
+        padding: 0px 45px;
         cursor: pointer;
     }
     &__open__btn {
@@ -317,19 +525,24 @@ body{
             outline: none;
             box-shadow: none;
         }
-        &[aria-expanded="true"]{
-            background: transparent;
-            border: 0;
-            box-shadow: none;
-            display: none;
+        // &[aria-expanded="true"]{
+        //     background: transparent;
+        //     border: 0;
+        //     box-shadow: none;
+        //     display: none;
             
-        }
+        // }
     }
+
+    //.accordion-info__title__btn
     &__title__btn{
         width: unset;
         font-size: 22px;
+        line-height: 65px;
+        letter-spacing: -1.5px;
         font-weight: bold;
         color: rgba(51, 51, 51, 0.829);
+        border: 0;
         transition: all 0.3s ease;
         background: transparent;
         padding: 0;
@@ -352,13 +565,21 @@ body{
             background: transparent;
             border: 0;
             box-shadow: none;
-            font-size: 48px;
+            font-size: inherit;
+            line-height: inherit;
+            letter-spacing: inherit;
             width: 100%;
             border-top: 3px solid rgba(51, 51, 51, 0.82);
             padding-top: 38px;
             margin-top: 34px;
             
             
+        }
+        &[aria-expanded="true"] ~ .accordion-info__open__btn{
+            background: transparent;
+            border: 0;
+            box-shadow: none;
+            display: none;
         }
     }
     &__body__btn {

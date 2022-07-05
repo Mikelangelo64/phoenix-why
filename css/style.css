@@ -13,28 +13,161 @@ body._lock {
   overflow: hidden;
 }
 
+h2 {
+  font-family: "Inter", sans-serif;
+  font-size: 48px;
+  line-height: 48px;
+  letter-spacing: -2.5px;
+  font-weight: 700;
+}
+@media screen and (max-width: 770px) {
+  h2 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+
+h3 {
+  font-family: "Inter", sans-serif;
+  font-size: 36px;
+  line-height: 40px;
+  letter-spacing: -2.5px;
+  font-weight: 700;
+}
+@media screen and (max-width: 770px) {
+  h3 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+
+h4 {
+  font-family: "Inter", sans-serif;
+  font-size: 28px;
+  line-height: 35px;
+  letter-spacing: -2.5px;
+  font-weight: 700;
+}
+
+h5 {
+  font-family: "Inter", sans-serif;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: -1px;
+  font-weight: 700;
+}
+
+h6 {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.75px;
+  font-weight: 700;
+}
+
 ._container {
-  max-width: 90%;
-  margin: auto;
+  max-width: 1110px;
+  margin: 0 auto;
+  /* @media screen and (max-width: 991px) {
+      max-width: 720px;
+  } */
+}
+@media screen and (max-width: 1399px) {
+  ._container {
+    max-width: 930px;
+  }
+}
+@media screen and (max-width: 770px) {
+  ._container {
+    max-width: 90%;
+  }
 }
 
-.logo__wrapper {
-  padding: 0;
+._text-display {
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: -0.75px;
+}
+@media screen and (max-width: 1030px) {
+  ._text-display {
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: -0.75px;
+  }
 }
 
-.logo {
-  width: 225px;
-  height: auto;
+._text-body {
+  font-family: "Inter", sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: -0.75px;
+}
+@media screen and (max-width: 770px) {
+  ._text-body {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0px;
+  }
 }
 
-._btn-default {
-  background: rgba(51, 51, 51, 0.82);
+._text-body__compact {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0px;
+}
+
+._text-small {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+}
+
+._btn {
+  background-color: #333333;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 16px;
   color: #fff;
   border: 0px;
   border-radius: 0;
+  padding: 17px 40px 17px 30px;
+}
+._btn._btn-yellow {
+  background-color: #594d0e;
+}
+._btn._btn-blue {
+  background-color: #0f4d58;
+}
+._btn._btn-green {
+  background-color: #344d14;
+}
+._btn._btn-red {
+  background-color: #561e1e;
+}
+
+.logo__wrapper {
+  padding: 0;
+  display: block;
+  max-width: 225px;
+}
+@media screen and (max-width: 1030px) {
+  .logo__wrapper {
+    max-width: 200px;
+  }
+}
+
+.logo {
+  width: 100%;
+  height: auto;
 }
 
 ._scroll-to-top {
@@ -103,6 +236,13 @@ body._lock {
   transition: all 0.3s ease;
   top: -50%;
 }
+@media screen and (max-width: 1200px) {
+  .header__content.col {
+    -webkit-box-flex: unset;
+        -ms-flex: unset;
+            flex: unset;
+  }
+}
 .header__navbar {
   padding: 0;
 }
@@ -110,22 +250,72 @@ body._lock {
   color: inherit;
 }
 .header__logo__btn__wrapper {
-  margin-bottom: 20px;
+  margin: auto 0;
+  height: 100%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+@media screen and (max-width: 991px) {
+  .header__logo__btn__wrapper {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+.header__logo__btn__wrapper.mt-3 {
+  margin-top: 0 !important;
 }
 .menu__sub {
+  font-size: 15px;
+  line-height: 22px;
   padding: 0;
   background: #fff;
 }
 .menu__sub__item {
   margin: 0 0 18px 0;
 }
+.menu__sub__item .nav-link {
+  padding: 0 1rem;
+}
 
 .menu__main {
   background: #FFD00D;
-  padding: 0px 0 0px 66px;
+  padding: 0px 0px 0px 66px;
+  width: 100%;
+}
+.menu__main #navbarContent2 {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+@media screen and (min-width: 1200px) {
+  .menu__main #navbarContent2 .navbar-nav {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
 }
 .menu__main__item {
-  margin: 18px 0;
+  font-size: 15px;
+  line-height: 22px;
+  margin: 16px 0;
+  font-weight: 700;
+  color: #594d0e;
+}
+.menu__main__item .nav-link {
+  padding: 0 1rem;
+}
+
+.btn__search__appear {
+  border-top: 0;
+  border-bottom: 0;
+  font-size: 15px;
+  line-height: 22px;
+}
+.btn__search__appear.btn {
+  padding: 0 0.75rem;
 }
 
 .search-form__wrapper {
@@ -134,12 +324,21 @@ body._lock {
 .search-form__btn {
   width: 100%;
   height: 100%;
+  padding: unset;
 }
 .search-form__input {
   background: #EFEFEF;
   border-radius: 0;
   font-size: 22px;
+  line-height: 35px;
+  letter-spacing: -1.4px;
   padding-bottom: 1px;
+}
+@media (max-width: 1200px) {
+  .search-form__input {
+    font-size: 18px;
+    padding: 7px 0 7px 18px;
+  }
 }
 .search-form__input:focus {
   background: #EFEFEF;
@@ -209,7 +408,7 @@ body._lock {
   font-size: 19px;
 }
 .accordion-info .accordion-item .accordion-body {
-  padding-bottom: 40px;
+  padding: 20px 45px 40px;
 }
 .accordion-info .accordion-item .accordion-body p {
   margin-bottom: 40px;
@@ -227,7 +426,7 @@ body._lock {
   background: #FFD00D;
 }
 .accordion-info__header {
-  padding: 1rem 1.25rem;
+  padding: 0px 45px;
   cursor: pointer;
 }
 .accordion-info__open__btn {
@@ -248,18 +447,14 @@ body._lock {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
-.accordion-info__open__btn[aria-expanded=true] {
-  background: transparent;
-  border: 0;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  display: none;
-}
 .accordion-info__title__btn {
   width: unset;
   font-size: 22px;
+  line-height: 65px;
+  letter-spacing: -1.5px;
   font-weight: bold;
   color: rgba(51, 51, 51, 0.829);
+  border: 0;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   background: transparent;
@@ -286,11 +481,20 @@ body._lock {
   border: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
-  font-size: 48px;
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
   width: 100%;
   border-top: 3px solid rgba(51, 51, 51, 0.82);
   padding-top: 38px;
   margin-top: 34px;
+}
+.accordion-info__title__btn[aria-expanded=true] ~ .accordion-info__open__btn {
+  background: transparent;
+  border: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  display: none;
 }
 .accordion-info__body__btn {
   padding: 1rem 1.5rem;
