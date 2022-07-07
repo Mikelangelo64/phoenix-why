@@ -75,29 +75,127 @@ $(document).ready(function(){
 
         $('.phoenix-navigation__list').slideUp(300)
 
-        let currentHeight
+        let currentHeight = Math.round($('.colored-navigation__nav').innerHeight())
+        let currentMargin = Math.round($('.colored-navigation__nav').outerHeight(true) - $('.colored-navigation__nav').innerHeight())
 
-        setTimeout(() => {
-            currentHeight = Math.round($('.colored-navigation__nav').outerHeight(true))
-            document.documentElement.style.setProperty('--navHeight', currentHeight + 'px')
-            console.log(1, $('.colored-navigation__nav').outerHeight(true));
+        //setTimeout(() => {
+            //currentHeight = Math.round($('.colored-navigation__nav').innerHeight())
+            document.documentElement.style.setProperty('--navHeight', currentMargin + 'px')
+            //console.log(1, $('.colored-navigation__nav').outerHeight(true));
     
-        }, 300);
+        //}, 300);
 
 
         $('.phoenix-navigation__title').click(function(e){
             $(this).toggleClass('_active-navigation')
             $('.phoenix-navigation__title span').toggleClass('_active-navigation')
+
+            if( $(this).hasClass('_active-navigation')){
+                document.documentElement.style.setProperty('--navHeight', currentHeight + currentMargin + 'px')
+            }else{
+                document.documentElement.style.setProperty('--navHeight', currentMargin + 'px')
+            }
             $('.phoenix-navigation__list').slideToggle(300)
 
-            setTimeout(() => {
-                currentHeight = Math.round($('.colored-navigation__nav').outerHeight(true))
-                document.documentElement.style.setProperty('--navHeight', currentHeight + 'px')
-                console.log(2, $('.colored-navigation__nav').outerHeight(true));
+            
+
+            //setTimeout(() => {
+               // currentHeight = Math.round($('.colored-navigation__nav').innerHeight())
+                
+                //console.log(2, $('.colored-navigation__nav').outerHeight(true));
         
-            }, 300);
+            //}, 300);
         })
     }
+    
+
+    //navigation is empty
+    let navLi = document.querySelector('.phoenix-navigation__list li')
+    let navigation = document.querySelector('.phoenix-navigation')
+    let navTitle = document.querySelector('.phoenix-navigation__title')
+    //console.log(document.querySelector('.phoenix-navigation__list li'))
+
+    if(navLi == null){
+        if(navigation && navTitle){
+            $(navigation).addClass('_empty-navigation')
+            $(navTitle).addClass('_empty-navigation')
+        }
+        
+    }
+
+    //custom select
+    $('select').each(function() {
+        // Cache the number of options
+        var $this = $(this),
+        numberOfOptions = $(this).children('option').length;
+
+        // Hides the select element
+        $this.addClass('s-hidden');
+
+        // Wrap the select element in a div
+        $this.wrap('<div class="select"></div>');
+
+        // Insert a styled div to sit over the top of the hidden select element
+        $this.after('<div class="styledSelect"></div>');
+
+        // Cache the styled div
+        var $styledSelect = $this.next('div.styledSelect');
+
+        // Show the first select option in the styled div
+        $styledSelect.text($this.children('option').eq(0).text());
+
+        // Insert an unordered list after the styled div and also cache the list
+        var $list = $('<ul />', {
+            'class': 'options'
+        }).insertAfter($styledSelect);
+
+        // Insert a list item into the unordered list for each select option
+        for (var i = 0; i < numberOfOptions; i++) {
+            $('<li />', {
+            text: $this.children('option').eq(i).text(),
+            rel: $this.children('option').eq(i).val()
+            }).appendTo($list);
+        }
+
+         // Cache the list items
+        var $listItems = $list.children('li');
+
+        // Show the unordered list when the styled div is clicked (also hides it if the div is clicked again)
+        $styledSelect.click(function(e) {
+            e.stopPropagation();
+            $('div.styledSelect.active').each(function() {
+            $(this).removeClass('active').next('ul.options').hide();
+            });
+            $(this).toggleClass('active').next('ul.options').toggle();
+        });
+
+        // Hides the unordered list when a list item is clicked and updates the styled div to show the selected list item
+        // Updates the select element to have the value of the equivalent option
+        $listItems.click(function(e) {
+            e.stopPropagation();
+            $styledSelect.text($(this).text()).removeClass('active');
+            $this.val($(this).attr('rel'));
+            $list.hide();
+            /* alert($this.val()); Uncomment this for demonstration! */
+        });
+
+        // Hides the unordered list when clicking outside of it
+        $(document).click(function() {
+            $styledSelect.removeClass('active');
+            $list.hide();
+        });
+    })
+
+
+    //separate accordion
+    $('.separate-accordion__body').slideUp(300)
+
+    $('.separate-accordion__item').click(function(e){
+        $(this).toggleClass('_active-accordion')
+        $(this).children('.separate-accordion__body').slideToggle(300)
+        $('.separate-accordion__item').not($(this)).removeClass('_active-accordion')
+        $('.separate-accordion__item').not($(this)).children('.separate-accordion__body').slideUp(300)
+    })
     
 
     //slider announcements
@@ -123,6 +221,33 @@ $(document).ready(function(){
             },
         }
     })
+    let separateSwiper = new Swiper('.swiper.separate-slider', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        //autoHeight: true,
+        loop: false,
+        pagination: {
+            
+            el: '.separate-slider__pagination__container',
+            clickable: true,
+            renderBullet: function (index, className) {
+                return `<span class= "separate-slider__pagination ${className} "></span>`;
+            }
+        },
+        navigation: {
+            nextEl: '.separate-slider__btns__container .swiper-button-next',
+            prevEl: '.separate-slider__btns__container .swiper-button-prev',
+        },
+        // breakpoints: {
+        //     750:{
+        //         slidesPerView: 2,
+        //     },
+        //     910:{
+        //         slidesPerView: 3,
+        //     },
+        // }
+    })
+
 
     //picture accordion
     $('.main-section .main__picture__container .accordion-pictures__img.imgOne').parent().addClass('show-accordion-picture')

@@ -13,7 +13,7 @@
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 
-    <title>Why Phoenix</title>
+    <title>Phoenix Accordion</title>
 </head>
 <body>
     <header id="header" class="fixed-top header ">
@@ -94,7 +94,7 @@
                   <nav class="navbar navbar-expand-xl float-end     menu__main header__navbar">
                     <div class="navbar-collapse collapse float-end multi-collapse" id="navbarContent2">
                         <ul class="navbar-nav mr-auto  ">
-                          <li class="nav-item menu__main__item _active-link">
+                          <li class="nav-item menu__main__item">
                             <a href="#why" class="nav-link">Why Phoenix</a>
                             <svg class="d-xl-none" xmlns="http://www.w3.org/2000/svg" width="7.002" height="13.002" viewBox="0 0 7.002 13.002">
                               <path id="Контур_344" data-name="Контур 344" d="M1.646,4.646a.5.5,0,0,1,.708,0L8,10.293l5.646-5.647a.5.5,0,0,1,.708.708l-6,6a.5.5,0,0,1-.708,0l-6-6a.5.5,0,0,1,0-.708Z" transform="translate(-4.499 14.501) rotate(-90)" fill="#333" fill-rule="evenodd"/>
@@ -205,21 +205,25 @@
         </div>
     </header>
 
-    <section class="banner section-first">
+    <section class="banner banner-stories section-first">
       <!-- <div class="banner__img">
         <img src="./assets/img/banner-why.png" alt="banner">
       </div> -->
       <div class="_container banner__container">
         <div class="banner__wrapper">
           <h1 class="title banner__title">
-            Why Phoenix
+            Section Name
           </h1>
+          <p class="banner__watermark">
+            fpo
+          </p>
         </div>
       </div>
     </section>
     
-    <section class="colored-navigation colored__red">
-      <div class="phoenix-navigation__title">
+    <section class="separate-section">
+
+      <div class="phoenix-navigation__title ">
         <p>In this section</p>
         <span></span>
 
@@ -227,23 +231,18 @@
           Back to Previous
         </a>
       </div>
-      <div class="_container colored-navigation__container">
-        <div class="colored-navigation__wrapper">
 
-          <nav class="phoenix-navigation colored-navigation__nav">
+      <div class="_container separate-section__container">
+        <div class="separate-section__wrapper">
+
+          <nav class="phoenix-navigation separate-section__nav ">
             <a href="#" class="nav-link phoenix-navigation__back">
-              <!-- <svg xmlns="http://www.w3.org/2000/svg" width="4.895" height="8.356" viewBox="0 0 4.895 8.356">
-                <g id="Сгруппировать_196" data-name="Сгруппировать 196" transform="translate(0.717 0.717)">
-                  <line id="Линия_106" data-name="Линия 106" x2="0.066" y2="4.829" transform="translate(3.415) rotate(45)" fill="none" stroke="#333" stroke-linecap="round" stroke-width="1"/>
-                  <line id="Линия_107" data-name="Линия 107" y1="4.83" x2="0.066" transform="translate(0 3.508) rotate(-45)" fill="none" stroke="#333" stroke-linecap="round" stroke-width="1"/>
-                </g>
-              </svg> -->
               Back to Home
             </a>
             
             <ul class="phoenix-navigation__list">
               
-              <li>
+              <!-- <li>
                 <a href="#" class="phoenix-navigation__item nav-link">
                   
 
@@ -269,182 +268,121 @@
                 <a href="#" class="phoenix-navigation__item nav-link">
                   Downtown
                 </a>
-              </li>
+              </li>  -->
             </ul>
-          </nav>
 
-          <div class="colored-navigation__content colored__red">
-
-            <div class="position-absolute text-center colored-navigation__center__block">
-              <p class="colored-navigation__center__title fw-bold m-0">5th</p>
-              <p class="colored-navigation__center__subtitle fw-bold m-0">Largest City in the USA</p>
-            </div>
-
-            <div class="colored-navigation__content__wrapper">
-              <h2 class="colored-navigation__title fw-bold">Designed for Success</h2>
-              <div class="colored-navigation__text">
-                <p class="_text-body">
-                  Phoenix is #1 in Entrepreneurial Activity and is 
-                  the ideal place to start and grow a business. As 
-                  the 5th largest city in the U.S., it’s expansive 
-                  physical infrastructure boasts many of the worlds 
-                  top companies. Phoenix is home to industry leaders 
-                  spanning manufacturing, high technology, and 
-                  bioscience research. 
-                </p>
-              </div>
-              <div class="colored-navigation__btns__container d-flex w-100 justify-content-between">
-              <button class="_btn _btn-red colored-navigation__btn text-uppercase">
-                See Industries
-              </button>
-            </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <section class="hot hot__connected">
-
-      <div class="hot__bg">
-        <svg xmlns="http://www.w3.org/2000/svg" width="613.525" height="604.103" viewBox="0 0 613.525 604.103">
-          <path id="Контур_241" data-name="Контур 241" d="M1579.166,1161.394c8.105-135.077,148.589-147.234,148.589-147.234s-104.011,32.419-112.117,137.78c-4.053,49.977,16.209,85.1,41.876,106.711,28.365,24.313,63.486,32.418,63.486,32.418-17.56,9.457-148.589-4.051-141.834-129.675m74.295,44.576s39.171-62.135,94.554-22.963,20.262,110.765-20.26,121.57c-39.174,10.807-97.258,5.4-144.536-51.329s-35.121-118.868-17.56-148.586c0,0-28.365,25.665-37.82,67.538-16.209,70.24,4.049,179.655,118.868,252.6,0,0-126.974-36.471-145.884-185.057,0,0-40.525,122.921,56.732,237.738s222.878,99.958,268.807,87.8,112.114-47.278,125.622-62.136c0,0-104.011,140.48-302.575,70.239,0,0,109.413,89.152,279.612,8.105s176.953-230.985,176.953-287.716-22.962-132.378-81.048-191.81c-58.084-58.085-133.727-91.854-170.2-90.5,0,0,206.671,59.437,176.953,272.858,0,0,9.458-163.444-128.323-217.474,0,0,83.749,58.083,81.046,141.831-2.7,82.4-37.82,131.027-99.958,156.692,0,0,37.823-49.979,32.42-99.958s-22.966-98.606,31.068-98.606c0,0-58.083-22.963-95.906-49.979s-95.907-67.54-112.116,0c0,1.351-86.45,4.052-86.45,89.15m155.34-74.291s-21.611-9.456-35.12-12.157c-8.105-1.351-5.4-22.964,12.156-10.806,14.86,8.1,21.613,17.56,22.964,22.964" transform="translate(-1492.449 -1011.418)" fill="#efefef" opacity="0.497"/>
-        </svg>
-      </div>
-
-
-      <div class="container-md">
-        <div class="d-flex flex-md-row flex-column align-items-center justify-content-between hot-content ">
-          <div class="hot__picture__container">
-            <div class="hot__picture">
-              <svg id="CoP_Phoenix_is_Hot_logotype" xmlns="http://www.w3.org/2000/svg" width="255" height="106.188" viewBox="0 0 255 106.188">
-                <path id="Контур_230" data-name="Контур 230" d="M533.666,873.211l13.408-.083.166,24.085,24.747-.166-.248-24.085,13.408-.083.5,60.833-13.408.165-.166-24.5-24.747.166.166,24.5-13.325.083Z" transform="translate(-482.351 -828.849)" fill="#f75555"/>
-                <path id="Контур_231" data-name="Контур 231" d="M886.25,899.96v-.166c-.166-17.3,13.408-31.616,32.2-31.7,18.788-.165,32.361,13.739,32.527,31.12v.166c.166,17.3-13.408,31.616-32.2,31.7-18.87.083-32.444-13.822-32.527-31.12m50.652-.414v-.165c-.083-10.429-7.78-19.119-18.622-19.036-10.76.083-18.208,8.69-18.126,19.119v.166c.083,10.428,7.78,19.119,18.622,19.036s18.208-8.69,18.126-19.119" transform="translate(-773.855 -824.892)" fill="#f75555"/>
-                <path id="Контур_232" data-name="Контур 232" d="M1290.438,885.46l-18.539.166-.083-12.332,50.487-.414.083,12.415-18.539.083.331,48.583-13.408.083Z" transform="translate(-1092.628 -828.849)" fill="#f75555"/>
-                <rect id="Прямоугольник_7" data-name="Прямоугольник 7" width="7.78" height="35.258" transform="translate(0 44.445)"/>
-                <path id="Контур_233" data-name="Контур 233" d="M313.415,903.9l4.552-5.463c3.145,2.648,6.538,4.3,10.511,4.3,3.145,0,5.131-1.241,5.131-3.311v-.083c0-1.986-1.241-2.979-7.118-4.469-7.118-1.821-11.67-3.807-11.67-10.76v-.083c0-6.373,5.131-10.677,12.332-10.677a20.182,20.182,0,0,1,13.077,4.469l-4.056,5.876c-3.145-2.152-6.207-3.476-9.187-3.476s-4.552,1.324-4.552,3.062v.083c0,2.318,1.49,3.062,7.614,4.635,7.118,1.9,11.173,4.469,11.173,10.594v.083c0,7.035-5.38,10.925-12.994,10.925a23.076,23.076,0,0,1-14.815-5.711" transform="translate(-300.255 -829.244)"/>
-                <path id="Контур_234" data-name="Контур 234" d="M237.45,622.052h14.4c8.442,0,13.491,4.966,13.491,12.167v.083c0,8.194-6.373,12.415-14.236,12.415H245.23v10.594h-7.78Zm13.9,17.794c3.89,0,6.125-2.317,6.125-5.38v-.083c0-3.476-2.4-5.38-6.29-5.38H245.23v10.76h6.125Z" transform="translate(-237.45 -621.473)"/>
-                <path id="Контур_235" data-name="Контур 235" d="M425.69,622.052h7.78V636.04h14.318V622.052h7.78v35.258h-7.78V643.158H433.47v14.153h-7.78Z" transform="translate(-393.081 -621.473)"/>
-                <path id="Контур_236" data-name="Контур 236" d="M632.086,637v-.083c0-10.015,7.945-18.208,18.788-18.208s18.705,8.111,18.705,18.126v.083c0,10.015-7.945,18.208-18.788,18.208s-18.7-8.111-18.7-18.126m29.382,0v-.083c0-6.042-4.469-11.091-10.677-11.091-6.29,0-10.594,4.966-10.594,11.008v.083c0,6.042,4.469,11.091,10.677,11.091s10.594-4.966,10.594-11.008" transform="translate(-563.721 -618.708)"/>
-                <path id="Контур_237" data-name="Контур 237" d="M882.913,622.052h26.568v6.87H890.61v7.2h16.636v6.87H890.61v7.449h19.119v6.87H882.913Z" transform="translate(-771.097 -621.473)"/>
-                <path id="Контур_238" data-name="Контур 238" d="M1072.109,622.052h7.118l16.553,21.685V622.052h7.614v35.258h-6.539l-17.132-22.429v22.429h-7.615Z" transform="translate(-927.518 -621.473)"/>
-                <rect id="Прямоугольник_8" data-name="Прямоугольник 8" width="7.78" height="35.258" transform="translate(183.739 0.579)"/>
-                <path id="Контур_239" data-name="Контур 239" d="M1384.874,639.35l-11.753-17.3h9.021l7.366,11.422,7.532-11.422h8.856l-11.835,17.215,12.332,18.043h-9.1l-7.863-12.084-8.028,12.084h-8.773Z" transform="translate(-1175.974 -621.473)"/>
-                <path id="Контур_240" data-name="Контур 240" d="M1497.762,1020.608c.5-8.276,9.1-9.021,9.1-9.021s-6.373,1.986-6.87,8.442a7.43,7.43,0,0,0,2.566,6.538,10.259,10.259,0,0,0,3.89,1.986c-1.076.58-9.1-.248-8.69-7.945m4.552,2.731s2.4-3.807,5.794-1.407,1.242,6.787-1.241,7.449a8.441,8.441,0,0,1-8.856-3.145,7.988,7.988,0,0,1-1.076-9.1,8.624,8.624,0,0,0-2.317,4.138c-.993,4.3.248,11.008,7.283,15.477a13.46,13.46,0,0,1-8.938-11.339,16.544,16.544,0,0,0,19.946,19.946c2.814-.745,6.87-2.9,7.7-3.807,0,0-6.373,8.608-18.54,4.3,0,0,6.7,5.463,17.133.5s10.842-14.153,10.842-17.629a17.357,17.357,0,0,0-4.966-11.753c-3.559-3.559-8.194-5.628-10.428-5.545,0,0,12.663,3.642,10.842,16.718,0,0,.579-10.014-7.863-13.325,0,0,5.132,3.559,4.966,8.69-.166,5.049-2.317,8.028-6.125,9.6,0,0,2.318-3.062,1.987-6.125s-1.407-6.042,1.9-6.042a33.2,33.2,0,0,1-5.876-3.062c-2.317-1.655-5.876-4.138-6.869,0,0,.083-5.3.248-5.3,5.462m9.518-4.552a13.979,13.979,0,0,0-2.152-.745c-.5-.083-.331-1.407.745-.662a2.722,2.722,0,0,1,1.407,1.407" transform="translate(-1275.041 -943.388)" fill="#f75555"/>
+            <div class="phoenix-navigation__bg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="613.525" height="604.103" viewBox="0 0 613.525 604.103">
+                <path id="Контур_241" data-name="Контур 241" d="M1579.166,1161.394c8.105-135.077,148.589-147.234,148.589-147.234s-104.011,32.419-112.117,137.78c-4.053,49.977,16.209,85.1,41.876,106.711,28.365,24.313,63.486,32.418,63.486,32.418-17.56,9.457-148.589-4.051-141.834-129.675m74.295,44.576s39.171-62.135,94.554-22.963,20.262,110.765-20.26,121.57c-39.174,10.807-97.258,5.4-144.536-51.329s-35.121-118.868-17.56-148.586c0,0-28.365,25.665-37.82,67.538-16.209,70.24,4.049,179.655,118.868,252.6,0,0-126.974-36.471-145.884-185.057,0,0-40.525,122.921,56.732,237.738s222.878,99.958,268.807,87.8,112.114-47.278,125.622-62.136c0,0-104.011,140.48-302.575,70.239,0,0,109.413,89.152,279.612,8.105s176.953-230.985,176.953-287.716-22.962-132.378-81.048-191.81c-58.084-58.085-133.727-91.854-170.2-90.5,0,0,206.671,59.437,176.953,272.858,0,0,9.458-163.444-128.323-217.474,0,0,83.749,58.083,81.046,141.831-2.7,82.4-37.82,131.027-99.958,156.692,0,0,37.823-49.979,32.42-99.958s-22.966-98.606,31.068-98.606c0,0-58.083-22.963-95.906-49.979s-95.907-67.54-112.116,0c0,1.351-86.45,4.052-86.45,89.15m155.34-74.291s-21.611-9.456-35.12-12.157c-8.105-1.351-5.4-22.964,12.156-10.806,14.86,8.1,21.613,17.56,22.964,22.964" transform="translate(-1492.449 -1011.418)" fill="#efefef" opacity="0.497"/>
               </svg>
             </div>
-            
-          </div>
-          <div class="text-left  hot__text__wrapper">
-            <h2 class="title hot__title">
-              A City Connected
-            </h2>
-            <p class="_text-body hot__main__text">
-              With city’s growing success, the Loop 202 expansion 
-              connects the East and West valley. The $1.9 billion 
-              project is a commitment to the city’s growth and success. 
-              As the 13th largest metro area in the U.S., the city 
-              stays connected by public and ground transportation.
-            </p>
-            <a href="#" class="hot__link">
-              See 202 Expansion Map
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
+          </nav>
 
+          <div class="separate-section__content ">
 
-    <section class="colored colored__green vibrant-center d-flex flex-column-reverse flex-lg-row align-items-center position-relative">
+            <div class="separate-section__title__container _title-container">
+              <h2 class="title _title-container__title">
+                Accordian Headline
+              </h2>
+              <p class="_text-body">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+                sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+                magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
+                et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
+                no sea takimata sanctus Lorem ipsum dolor sit amet. Lorem 
+                ipsum dolor sit amet, consetetur sadipscing elitr, sed diam 
+                nonumy eirmod tempor invidunt ut labore et dolore magna 
+                aliquyam erat, sed diam voluptua. At vero eos et accusam et 
+                justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea.
+              </p>
+            </div>
 
-      <div class="colored__wrapper">
-        <div class="_container">
-          <div class="colored__content ">
-            <div class="colored__content__wrapper">
-              <h2 class="colored__title fw-bold">A Vibrant Center</h2>
-              <div class="colored__text">
-                <p class="_text-body">
-                  With a $5 billion investment, Downtown Phoenix 
-                  has grown into a destination for people from all 
-                  over the world. The city center features a vibrant 
-                  nightlife, dining, and music scene. Historic warehouses 
-                  and homes have transformed into contemporary 
-                  restaurants and performance venues.
-                </p>
+            <div class="separate-section__component">
+              <h3 class="separate-section__h3">Section Headline</h3>
+              
+              <div class="separate-accordion">
+                <div class="separate-accordion__item">
+                  <div class="separate-accordion__title _text-body">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam?
+                    <span class="separate-accordion__toggle"></span>
+                  </div>
+                  <div class="separate-accordion__body">
+                    <p class="_text-body">
+                      Absolutely! Dolor sit amet, <a href="#">consetetur sadipscing</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="separate-accordion__item">
+                  <div class="separate-accordion__title _text-body">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam?
+                    <span class="separate-accordion__toggle"></span>
+                  </div>
+                  <div class="separate-accordion__body">
+                    <p class="_text-body">
+                      Absolutely! Dolor sit amet, <a href="#">consetetur sadipscing</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="separate-accordion__item">
+                  <div class="separate-accordion__title _text-body">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam?
+                    <span class="separate-accordion__toggle"></span>
+                  </div>
+                  <div class="separate-accordion__body">
+                    <p class="_text-body">
+                      Absolutely! Dolor sit amet, <a href="#">consetetur sadipscing</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="separate-accordion__item">
+                  <div class="separate-accordion__title _text-body">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam?
+                    <span class="separate-accordion__toggle"></span>
+                  </div>
+                  <div class="separate-accordion__body">
+                    <p class="_text-body">
+                      Absolutely! Dolor sit amet, <a href="#">consetetur sadipscing</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="separate-accordion__item">
+                  <div class="separate-accordion__title _text-body">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam?
+                    <span class="separate-accordion__toggle"></span>
+                  </div>
+                  <div class="separate-accordion__body">
+                    <p class="_text-body">
+                      Absolutely! Dolor sit amet, <a href="#">consetetur sadipscing</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="separate-accordion__item">
+                  <div class="separate-accordion__title _text-body">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam?
+                    <span class="separate-accordion__toggle"></span>
+                  </div>
+                  <div class="separate-accordion__body">
+                    <p class="_text-body">
+                      Absolutely! Dolor sit amet, <a href="#">consetetur sadipscing</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="separate-accordion__item">
+                  <div class="separate-accordion__title _text-body">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam?
+                    <span class="separate-accordion__toggle"></span>
+                  </div>
+                  <div class="separate-accordion__body">
+                    <p class="_text-body">
+                      Absolutely! Dolor sit amet, <a href="#">consetetur sadipscing</a>
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div class="colored__btns__container d-flex w-100 align-items-center justify-content-between">
-              <button class="_btn _btn-green colored__btn text-uppercase">Discover Downtown Phoenix</button>
-            </div>
             </div>
             
           </div>
-        </div>
-      </div>
-      <div class="position-relative colored__img__wrapper">
-        <img src="./assets/img/vibrant-center.png" alt="colored-1" class= "colored__img">
-      </div>
-    </section>
 
-    <section class="media-section diverse">
-      <div class="_container">
-        <div class="media-section-content diverse-content">
-          <div class="media-section-content__media__container diverse-content__media__container">
-            <div class="media-section-content__img diverse-content__img">
-              <img src="./assets/img/diverse-in-life.png" alt="diverse-in-life">
-            </div>
-            <div class="media-section-content__media__info  diverse-content__media__info">
-              <p class="media-section-content__big__subtitle diverse-content__big__subtitle">
-                20+
-              </p>
-              <p class="m-0 media-section-content__small__subtitle diverse-content__small__subtitle">
-                Cities and Towns
-              </p>
-            </div>
-          </div>
-          <div class="media-section-content__text__container diverse-content__text__container">
-            <h2 class="fw-bold media-section-content__title diverse-content__title">
-              Diverse in Life
-            </h2>
-            <p class="_text-body media-section-content__text diverse-content__text">
-              The Greater Phoenix Area is made up of more than 
-              20 cities and towns. Behind every corner is a 
-              place to call home, each boasting its own culture,
-               history, and attractions. Whether you choose to live 
-               in downtown Phoenix or the suburbs of Chandler, you will
-                find a community that embodies your lifestyle. Phoenix 
-                sets itself apart from other cities for its qualify 
-                of life and innovation.
-            </p>
-            <button class="_btn media-section-content__btn diverse-content__btn">View Our Demographics</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="film">
-      <div class="_container">
-        <div class="film__wrapper">
-
-          <div class="film__text__container">
-            <h2 class="fw-bold film__title title">
-              Film in Phoenix
-            </h2>
-            <p class="_text-body film__text">
-              For more than 50 years, Phoenix has made its name in the film industry as the 
-              location for many motion pictures, TV shows, and commercials. Clint Eastwood’s 
-              movie “The Gauntlet” and the opening scenes of Alfred Hitchcock’s “Psycho” were 
-              filmed in downtown Phoenix. The city’s versatile landscape and sunny weather 
-              attract top filmmakers, talent, and crew from all over the world. Arizona’s Reel 
-              Savings program provides filmmakers with discounts on hotels, restaurants, rental 
-              cars, and equipment vendors as an incentive to call “action” in our city.
-            </p>
-            <button class="_btn film__btn">Learn About Filming in Phoenix</button>
-          </div>
-
-          <div class="film__img">
-            <img src="./assets/img/img-film.png" alt="film">
-          </div>
         </div>
       </div>
     </section>
