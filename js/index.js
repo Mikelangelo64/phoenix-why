@@ -29,6 +29,20 @@ $(document).ready(function(){
         $('.btn__search__appear').click(function(e){
             $(document.body).toggleClass('_lock')
         })
+
+        $('.search-form__close').click(function(e){
+            $('.btn__search__appear').attr('aria-expanded', 'false')
+            $(document.body).removeClass('_lock')
+
+            $('.search-form').removeClass('collapse')
+            $('.search-form').addClass('collapsing')
+            $('.search-form').removeClass('show')
+            setTimeout(() => {
+                $('.search-form').removeClass('collapsing')
+                $('.search-form').addClass('collapse')
+
+            }, 300);
+        })
     }
 
     //header & scroll-appear
@@ -67,6 +81,11 @@ $(document).ready(function(){
 
 
         
+    })
+
+    $('._scroll-to-top').click(function(e){
+        e.preventDefault()
+        $('html, body').animate({scrollTop:0}, '300');
     })
 
     //navigation hide
@@ -198,6 +217,13 @@ $(document).ready(function(){
     })
     
 
+    //slider-video click
+    $('.separate-slider__video').click(function(e){
+        $(this).children('video').attr('controls', 'true')
+        $(this).children('video')[0].play()
+        $(this).children('.video__btn__play').css('display', 'none')
+    })
+
     //slider announcements
     let announcementsSwiper = new Swiper('.swiper.carousel-announcements', {
         slidesPerView: 1,
@@ -238,14 +264,6 @@ $(document).ready(function(){
             nextEl: '.separate-slider__btns__container .swiper-button-next',
             prevEl: '.separate-slider__btns__container .swiper-button-prev',
         },
-        // breakpoints: {
-        //     750:{
-        //         slidesPerView: 2,
-        //     },
-        //     910:{
-        //         slidesPerView: 3,
-        //     },
-        // }
     })
 
 
